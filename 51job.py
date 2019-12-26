@@ -58,7 +58,7 @@ def next_page(page_num):
         next_page(page_num)
 
 
-# # css文本输入
+# css文本输入
 def input_keys(selector, keys):
     input = wait.until(EC.presence_of_element_located((By.CSS_SELECTOR, selector)))
     input.clear()
