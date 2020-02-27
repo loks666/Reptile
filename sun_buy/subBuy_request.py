@@ -143,9 +143,7 @@ def login():
         'captcha': 'EFRG',
     }
     data['captcha'] = input('验证码：')
-    response = session.post('http://biz.smpaa.cn/ysxtqxcp/login', headers=headers, data=data)
-    result = response.text
-    # print(result)
+    session.post('http://biz.smpaa.cn/ysxtqxcp/login', headers=headers, data=data)
 
 
 if __name__ == '__main__':
