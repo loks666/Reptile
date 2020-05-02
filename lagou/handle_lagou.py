@@ -3,7 +3,6 @@ import multiprocessing
 import time
 
 import requests
-from bs4 import BeautifulSoup
 from lxml import etree
 import urllib3
 from urllib3.exceptions import InsecureRequestWarning

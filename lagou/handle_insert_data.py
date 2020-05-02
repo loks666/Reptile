@@ -49,18 +49,18 @@ class HandleLaGouData():
             positionType='python'
         )
         # 在存储数据之前，先来查询一下表里是否有这条岗位信息
-        # query_result = self.mysql_session.query(Lagoutables).filter(Lagoutables.crawl_date == date,
-        #                                                             Lagoutables.positionID == item[
-        #                                                                 'positionId']).first()
-        # if query_result:
-        #     pass
-        #     print('该岗位信息已存在%s:%s:%s'%(item['positionId'],item['city'],item['positionName']))
-        # else:
-        # 插入数据
-        self.mysql_session.add(data)
-        # 提交数据到数据库
-        self.mysql_session.commit()
-        # print('新增岗位信息%s'%item['positionId'])
+        query_result = self.mysql_session.query(Lagoutables).filter(Lagoutables.crawl_date == date,
+                                                                    Lagoutables.positionID == item[
+                                                                        'positionId']).first()
+        if query_result:
+            pass
+            print('该岗位信息已存在%s:%s:%s' % (item['positionId'], item['city'], item['positionName']))
+        else:
+            # 插入数据
+            self.mysql_session.add(data)
+            # 提交数据到数据库
+            self.mysql_session.commit()
+            # print('新增岗位信息%s'%item['positionId'])
 
 
 lagou_mysql = HandleLaGouData()
