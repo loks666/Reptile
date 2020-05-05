@@ -7,7 +7,7 @@ from lxml import etree
 import urllib3
 from urllib3.exceptions import InsecureRequestWarning
 
-from lagou.handle_insert_data import lagou_mysql
+from lagou.lagou_spider.handle_insert_data import lagou_mysql
 
 urllib3.disable_warnings(InsecureRequestWarning)
 
