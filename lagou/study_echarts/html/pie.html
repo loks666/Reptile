@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>柱形图</title>
+    <!--引入echarts.js这个文件-->
+    <script src="../js/echarts.js"></script>
+</head>
+<body>
+    <!--定义画布-->
+    <div id="main" style="height: 400px;width: 600px"></div>
+    <script type="text/javascript">
+        // 进行echarts的初始化，以及定位到画布
+        var mychart = echarts.init(document.getElementById("main"))
+        // 配置项和配置数据
+        var option = {
+            // 标题
+            title:{
+                text:'饼图'
+            },
+            tooltip:{},
+            // 图例
+            legend:{
+                data:["直接访问","软件营销","联盟广告","视频广告","搜索引擎"]
+            },
+            series:[{
+                type:'pie',
+                radius:'55%',
+                center:["50%","50%"],
+                data:[
+                    {name:'直接访问',value:336},
+                    {name:'软件营销',value:125},
+                    {name:'联盟广告',value:272},
+                    {name:'视频广告',value:725},
+                    {name:'搜索引擎',value:934},
+                ],
+                roseType:'radius'
+            }]
+
+        };
+        mychart.setOption(option)
+    </script>
+</body>
+</html>

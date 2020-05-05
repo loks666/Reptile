@@ -15,8 +15,8 @@ urllib3.disable_warnings(InsecureRequestWarning)
 class HandleLaGou(object):
     global get_url
     global positionType
-    positionType = 'python'
-    get_url = 'https://www.lagou.com/jobs/list_python?&px=default&city=%s'
+    positionType = 'java'
+    get_url = 'https://www.lagou.com/jobs/list_java?&px=default&city=%s'
 
     def __init__(self):
         # 使用session保存cookie信息
@@ -66,12 +66,12 @@ class HandleLaGou(object):
         while True:
             try:
                 if method == 'get':
-                    response = self.lagou_session.get(url=url, headers=self.header, verify=False, proxies=proxy,
+                    response = self.lagou_session.get(url=url, headers=self.header, verify=False, proxies=None,
                                                       timeout=6)
                     response.encoding = 'utf-8'
                 elif method == 'post':
                     response = self.lagou_session.post(url=url, headers=self.header, data=data, verify=False,
-                                                       proxies=proxy, timeout=6)
+                                                       proxies=None, timeout=6)
             except:
                 # 清除cookies信息
                 self.lagou_session.cookies.clear()
@@ -94,7 +94,7 @@ if __name__ == '__main__':
     lagou = HandleLaGou()
     lagou.handle_city()
     # 引入多进程加速抓取
-    pool = multiprocessing.Pool(2)
+    pool = multiprocessing.Pool(3)
     for city in lagou.city_list:
         pool.apply_async(lagou.city_job, args=(city,))
     pool.close()
