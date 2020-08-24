@@ -17,7 +17,7 @@ url = 'https://login.51job.com/login.php'
 wait = WebDriverWait(driver, 10)
 xpath = 'xpath'
 weibo_name = '284190056@qq.com'
-weibo_psw = ''
+weibo_psw = 'Lx284190056'
 
 
 def weibo_login():
@@ -29,19 +29,19 @@ def weibo_login():
     click('.//*[@node-type="submit"]', xpath)
     # time.sleep(3)
 
-
 def job_login():
     url = 'https://www.51job.com/'
     driver.get(url)
-    time.sleep(30)
-
+    input_keys('#loginname', '你的账号')
+    input_keys('#password', '你的密码')
+    click('#login_btn')
 
 def search():
     try:
         # 点击首页
         click('//*[@id="topIndex"]/div/p/a[1]', xpath)
         # 搜索职位
-        input_keys('//*[@id="kwdselectid"]', 'java', xpath)
+        input_keys('//*[@id="kwdselectid"]', 'java开发', xpath)
         click('/html/body/div[3]/div/div[1]/div/button', xpath)
         # 获取页数
         page = driver.find_element_by_xpath(
