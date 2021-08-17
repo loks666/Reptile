@@ -1,25 +1,24 @@
-from sqlalchemy import create_engine, Integer,String,Float
+from sqlalchemy import create_engine, Integer, String, Float
 from sqlalchemy.orm import sessionmaker
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy import Column
 
-
-
-#创建数据库的连接
+# 创建数据库的连接
 engine = create_engine("mysql+pymysql://root:1234@127.0.0.1:3306/lagou?charset=utf8")
-#操作数据库，需要我们创建一个session
+# 操作数据库，需要我们创建一个session
 Session = sessionmaker(bind=engine)
 
-#声明一个基类
+# 声明一个基类
 Base = declarative_base()
 
+
 class Lagoutables(Base):
-    #表名称
+    # 表名称
     __tablename__ = 'lagou_data'
-    #id,设置为主键和自动增长
-    id = Column(Integer,primary_key=True,autoincrement=True)
-    #岗位ID,非空字段
-    positionID = Column(Integer,nullable=True)
+    # id,设置为主键和自动增长
+    id = Column(Integer, primary_key=True, autoincrement=True)
+    # 岗位ID,非空字段
+    positionID = Column(Integer, nullable=True)
     # 经度
     longitude = Column(Float, nullable=False)
     # 纬度
@@ -58,7 +57,6 @@ class Lagoutables(Base):
     positionType = Column(String(length=20), nullable=False)
 
 
-
 if __name__ == '__main__':
-    #创建数据表
+    # 创建数据表
     Lagoutables.metadata.create_all(engine)

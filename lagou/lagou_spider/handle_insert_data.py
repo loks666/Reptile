@@ -5,13 +5,13 @@ from sqlalchemy import func
 from lagou.lagou_spider.create_lagou_tables import Session, Lagoutables
 
 
-class HandleLaGouData():
+class HandleLaGouData:
     def __init__(self):
         # 实例化session信息
         self.mysql_session = Session()
         self.positionType = ''
         self.date = ''
-        # self.date = time.strftime("%Y-%m-%d", time.localtime())
+        # self.date = time.strife("%Y-%m-%d", time.localtime())
 
     def insert_item(self, item):
         date = time.strftime('%Y-%m-%d', time.localtime())
@@ -70,7 +70,7 @@ class HandleLaGouData():
         # print('新增岗位信息%s'%item['positionId'])
 
     # 行业信息
-    def query_industryfield_result(self, conditions):
+    def query_result(self, conditions):
         info = {}
         # 查询今日抓取到的行业信息数据
         result = self.mysql_session.query(Lagoutables.industryField).filter(

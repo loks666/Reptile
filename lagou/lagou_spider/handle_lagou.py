@@ -22,7 +22,8 @@ class HandleLaGou(object):
         # 使用session保存cookie信息
         self.lagou_session = requests.session()
         self.header = {
-            'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.129 Safari/537.36'}
+            'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) '
+                          'Chrome/81.0.4044.129 Safari/537.36'}
         self.city_list = ''
 
     # 获取全国所有城市
@@ -58,7 +59,7 @@ class HandleLaGou(object):
 
     def handle_request(self, method, url, data=None, info=None):
         # 加入动态代理
-        proxyinfo = "http://%s:%s@%s:%s" % ('H9N137501G5053ZD', '2CBABB5D337D3A37', 'http-dyn.abuyun.com', '9020')
+        proxyinfo = "https://%s:%s@%s:%s" % ('H9N137501G5053ZD', '2CBABB5D337D3A37', 'http-dyn.abuyun.com', '9020')
         proxy = {
             "http": proxyinfo,
             "https": proxyinfo
