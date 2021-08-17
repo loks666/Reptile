@@ -10,8 +10,9 @@ from pyquery import pyquery
 from selenium.webdriver.support.wait import WebDriverWait
 import os
 
-chromedriver = "I:\Python38\chromedriver.exe"
+chromedriver = "chromedriver.exe"
 os.environ["webdriver.Chrome.driver"] = chromedriver
+
 browser = webdriver.Chrome(chromedriver)
 browser.maximize_window()
 
