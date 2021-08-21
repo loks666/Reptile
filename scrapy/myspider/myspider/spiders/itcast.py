@@ -7,7 +7,6 @@ class ItcastSpider(scrapy.Spider):
     start_urls = ['http://www.itcast.cn/channel/teacher.shtml']
 
     def parse(self, response):
-        # ret1 = response.xpath("//h3/text()").extract()
         # print(ret1)
         li_list = response.xpath("//div[@class='tea_con']//li")
         for li in li_list:
