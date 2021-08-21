@@ -15,7 +15,7 @@ def get_echart_data():
     lagou_mysql.positionType = 'python'
     lagou_mysql.date = '2020-05-02'
     # 行业发布数量分析
-    info['echart_1'] = lagou_mysql.query_industryfield_result(1500)
+    info['echart_1'] = lagou_mysql.query_result(1500)
     # 薪资发布数量分析
     info['echart_2'] = lagou_mysql.query_salary_result(1500)
     # 岗位数量分析,折线图
