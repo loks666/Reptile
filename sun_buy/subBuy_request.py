@@ -5,6 +5,7 @@ from pytesseract import image_to_string
 auth_code = 'auth_code.png'
 session = requests.session()
 
+
 #  获取验证码
 def get_auth_code():
     global session
@@ -12,7 +13,6 @@ def get_auth_code():
     response = session.get('http://biz.smpaa.cn/ysxtqxcp/myCaptcha')
     with open(auth_code, 'wb') as f:
         f.write(response.content)
-
 
 
 # 图片转变中度灰，识别不出
@@ -27,10 +27,10 @@ def convert_img():
 
 # 降噪，转换效果不理想
 def get_bin_table(threshold=115):
-    '''
+    """
     获取灰度转二值的映射table
     0表示黑色,1表示白色
-    '''
+    """
     table = []
     for i in range(256):
         if i < threshold:
@@ -137,12 +137,7 @@ def login():
         'Upgrade-Insecure-Requests': '1',
         'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.9 Safari/537.36',
     }
-    data = {
-        'loginName': '',
-        'password': '',
-        'captcha': 'EFRG',
-    }
-    data['captcha'] = input('验证码：')
+    data = {'loginName': '', 'password': '', 'captcha': input('验证码：')}
     session.post('http://biz.smpaa.cn/ysxtqxcp/login', headers=headers, data=data)
 
 
