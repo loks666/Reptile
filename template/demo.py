@@ -19,7 +19,7 @@ def get_html(target_url):
     # 获取网页，并带有伪装的浏览器头，一般好的网站会有检测是不是程序访问
     res.encoding = res.apparent_encoding  # 设置编码，防止乱码
     # print(res.text)#输出网页内容
-    return etree.parse(res.content)  # 返回网页的内容
+    return etree.HTML(res.content)
 
 
 # 通过bs4解析，主要是标签选择器
@@ -34,13 +34,11 @@ def save():
 
 
 if __name__ == '__main__':
-    target = "https://www.douban.com/group/search?cat={}&q={}".format(1019, '上海');
+    target = "http://www.douban.com/group/search?cat={}&q={}".format(1019, '上海');
     html = get_html(target)
-    result = html.xpath("")
-    print('\n')
+    result = html.xpath('//div[@class="content"]/text()')
+    print()
     print(result)
-    html = BeautifulSoup(html, 'lxml')
-
-    attrs_place = html.xpath(attrs={"id": "places_neighbours__row"})
+    # html = BeautifulSoup(html, 'lxml')
+    # print(result)
     # print(attrs_place)
-    pd.read_csv('D:/test/t1.csv').to_parquet
