@@ -10,12 +10,18 @@ from lxml import etree
 
 def get_html(target_url):
     header = {
-        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) '
-                      'Chrome/96.0.4664.45 Safari/537.36',
-        'Cookie': ''}
 
-    proxies = {"http": None, "https": None}
-    res = requests.get(target_url, headers=header, proxies=proxies)
+        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) '
+                      'Chrome/95.0.4638.69 Safari/537.36',
+        'Sec-Fetch-Site': 'same-origin',
+        'Sec-Fetch-Mode': 'cors',
+        'Sec-Fetch-Dest': 'empty',
+        'Referer': 'https://movie.douban.com/',
+        'Accept-Encoding': 'gzip, deflate, br',
+        'Accept-Language': 'zh-CN,zh;q=0.9'
+    }
+    proxies = {'http': None, 'https': None}
+    res = requests.get(target_url, headers=header)
     # 获取网页，并带有伪装的浏览器头，一般好的网站会有检测是不是程序访问
     res.encoding = res.apparent_encoding  # 设置编码，防止乱码
     # print(res.text)#输出网页内容
@@ -34,11 +40,9 @@ def save():
 
 
 if __name__ == '__main__':
-    target = "http://www.douban.com/group/search?cat={}&q={}".format(1019, '上海');
+    target = 'https://www.douban.com/group/search?cat={}&q={}'.format(1019, '上海');
     html = get_html(target)
+    print(html.text)
     result = html.xpath('//div[@class="content"]/text()')
     print()
     print(result)
-    # html = BeautifulSoup(html, 'lxml')
-    # print(result)
-    # print(attrs_place)
