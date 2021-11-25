@@ -54,7 +54,10 @@ if __name__ == '__main__':
         print('正标题', '副标题', '其他标题', '导演和主演', '年份', '地区', '类型', '评分', '评分人数','名言')
         # url = 'https://movie.douban.com/top250?start={}&filter='.format(page * 25)  # 电影的url，有多页的时候需要观察url的规律
         url = 'https://www.douban.com/group/search?cat=1019&q={}'.format('上海')
+        url = 'https://www.douban.com/group/search?cat={}&q={}}'.format('上海')
+
         text = get_html(url)  # 获取网页内容
         print(text)
+        soup = BeautifulSoup("<html>A Html Text</html>", "html.parser")
         # ana_by_bs4(text)  # bs4方式解析
 
