@@ -39,25 +39,42 @@ def ana_by_bs4(html):
         area = infos[1].strip()  # 国家，地区
         m_type = infos[2].strip()  # 类型
         rating = li.find('span', class_='rating_num').text  # 评分
-        remark_num=li.find('div',class_='star').find_all('span')[3].text[:-3]#评分人数
+        remark_num = li.find('div', class_='star').find_all('span')[3].text[:-3]  # 评分人数
         try:
             quote = li.find('span', class_='inq').text  # 名言
-        except:  # 名言可能不存在
+        except NameError:  # 名言可能不存在
             quote = ''
         # print(actor)
-        print(index, the_title, sub_title, other_title, actor, year, area, m_type, rating,remark_num, quote)
+        print(index, the_title, sub_title, other_title, actor, year, area, m_type, rating, remark_num, quote)
+
+
+def get_proxy(proxy):
+    # 代理服务器
+    proxyHost = "ip"
+    proxyPort = "port"
+    proxyMeta = "http://%(host)s:%(port)s" % {
+        "host": proxyHost,
+        "port": proxyPort,
+    }
+    proxies = {
+        "http": proxyMeta,
+        "https": proxyMeta
+    }
+    resp = requests.get(proxy, proxies=proxies)
+    print(resp.status_code)
+    print(resp.text)
+    return resp
 
 
 if __name__ == '__main__':
     for page in range(10):
-        print('第{}页'.format(page + 1))
-        print('正标题', '副标题', '其他标题', '导演和主演', '年份', '地区', '类型', '评分', '评分人数','名言')
-        # url = 'https://movie.douban.com/top250?start={}&filter='.format(page * 25)  # 电影的url，有多页的时候需要观察url的规律
-        url = 'https://www.douban.com/group/search?cat=1019&q={}'.format('上海')
-        url = 'https://www.douban.com/group/search?cat={}&q={}}'.format('上海')
+        # url = 'https://www.douban.com/group/search?cat=1019&q={}'.format('上海')
+        url = 'https://www.douban.com'
+        proxy_url = 'http://tiqu.pyhttp.taolop.com/getflowip?count=5&neek=15925&type=2&sep=4&sb=&ip_si=1&mr=0'
+        proxys = get_proxy(proxy_url)
+        print(proxys)
+        # text = get_html(url)  # 获取网页内容
+        # print(text)
 
-        text = get_html(url)  # 获取网页内容
-        print(text)
-        soup = BeautifulSoup("<html>A Html Text</html>", "html.parser")
+        # soup = BeautifulSoup("<html>A Html Text</html>", "html.parser")
         # ana_by_bs4(text)  # bs4方式解析
-
