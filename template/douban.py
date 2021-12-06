@@ -1,6 +1,8 @@
 # -*- coding: utf-8 -*-
 # author:Gary
+import html
 import json
+from xml import etree
 
 import requests  # 获取网页内容
 from bs4 import BeautifulSoup  # 解析网页内容
@@ -29,8 +31,6 @@ def get_html(urls, proxy):
         if res.status_code == 403:
             get_html(urls, get_proxy())
         res.encoding = 'utf-8'
-        # print(res.encoding)
-        print(res.text)
         return res.text  # 返回网页的内容
     except RuntimeError:
         return None
@@ -81,22 +81,14 @@ def get_proxy():
 
 
 if __name__ == '__main__':
-    # print(get_proxy())
     url = 'https://www.douban.com/group/search?cat=1019&q={}'.format('上海')
-    # str = '{"code":0,"data":[{"ip":"121.234.174.17","port":64256,"expire_time":"2021-12-06 18:51:31","city":"江苏省宿迁市","isp":"电信"}],"msg":"0","success":true}'
-    # json_str = json.loads(str)
-    # data = json_str['data']
-    # for i in data:
-    #     print(get_html(urls=url, proxy=i))
-    get_html(urls=url, proxy=get_proxy())
+    htmldoc = get_html(urls=url, proxy=get_proxy())
 
-# for page in range(10):
-# url = 'https://www.douban.com/group/search?cat=1019&q={}'.format('上海')
-# url = 'https://www.douban.com'
-# proxy_url = 'http://tiqu.pyhttp.taolop.com/getflowip?count=5&neek=15925&type=2&sep=4&sb=&ip_si=1&mr=0'
-# proxys = get_proxy(proxy_url)
-# print(proxys)
-# text = get_html(url)  # 获取网页内容
-# print(text)
-# soup = BeautifulSoup("<html>A Html Text</html>", "html.parser")
-# ana_by_bs4(text)  # bs4方式解析
+    soup = BeautifulSoup(htmldoc, "html.parser")
+    result = soup.find_all(attrs={'class': 'result'})
+    for item in result:
+        print(item.text)
+
+    # print(result.text)
+    # selector = html.etree.HTML(htmldoc)
+    # print(selector.xpath('//div[@class="result"]'))
