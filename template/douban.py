@@ -8,24 +8,32 @@ import re  # 正则匹配内容
 
 
 # 获取网页的内容
-def get_html(urls):
-    header = {
-        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) '
-                      'Chrome/79.0.3945.130 Safari/537.36'}
-    proxyHost = "ip"
-    proxyPort = "port"
-    proxyMeta = "http://%(host)s:%(port)s" % {
-        "host": proxyHost,
-        "port": proxyPort,
-    }
-    proxies = {
-        "http": proxyMeta,
-        "https": proxyMeta
-    }
-    res = requests.get(urls, headers=header)  # 获取网页，并带有伪装的浏览器头，一般好的网站会有检测是不是程序访问
-    res.encoding = res.apparent_encoding  # 设置编码，防止乱码
-    # print(res.text)#输出网页内容
-    return res.text  # 返回网页的内容
+def get_html(urls, proxy):
+    print(proxy)
+    try:
+        header = {
+            'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) '
+                          'Chrome/79.0.3945.130 Safari/537.36'}
+        proxyHost = proxy['ip']
+        proxyPort = proxy['port']
+        proxyMeta = "http://%(host)s:%(port)s" % {
+            "host": proxyHost,
+            "port": proxyPort,
+        }
+        proxies = {
+            "http": proxyMeta,
+            "https": proxyMeta
+        }
+        res = requests.get(urls, headers=header, proxies=proxies)
+        print(res.status_code)
+        if res.status_code == 403:
+            get_html(urls, get_proxy())
+        res.encoding = 'utf-8'
+        # print(res.encoding)
+        print(res.text)
+        return res.text  # 返回网页的内容
+    except RuntimeError:
+        return None
 
 
 # 通过bs4解析，主要是标签选择器
@@ -61,27 +69,34 @@ def ana_by_bs4(html):
 
 
 def get_proxy():
-    url = 'http://tiqu.pyhttp.taolop.com/getflowip?count=1&neek=15925&type=2&sep=4&sb=&ip_si=1&mr=0'
-    restponse = requests.get(url)
-    if restponse.status_code == 200:
-        print()
+    url = 'http://tiqu.pyhttp.taolop.com/getip?count=1&neek=15925&type=2&yys=0&port=2&sb=&mr=2&sep=0&ts=1&ys=1&cs=1'
+    response = requests.get(url)
+    if response.status_code == 200:
+        str = json.loads(response.text)
+        ip_list = str['data']
+        print(response.text)
+        return ip_list[0]
     else:
-        print()
+        print('failed')
 
 
 if __name__ == '__main__':
-    # get_proxy()
-    str = '{"code":0,"data":[{"ip":"140.249.72.22","outip":"182.38.207.135","port":35150},{"ip":"140.249.72.43","outip":"113.94.59.162","port":26408},{"ip":"140.249.72.43","outip":"114.239.89.154","port":21333}],"msg":"0","success":true}'
+    # print(get_proxy())
+    url = 'https://www.douban.com/group/search?cat=1019&q={}'.format('上海')
+    # str = '{"code":0,"data":[{"ip":"121.234.174.17","port":64256,"expire_time":"2021-12-06 18:51:31","city":"江苏省宿迁市","isp":"电信"}],"msg":"0","success":true}'
+    # json_str = json.loads(str)
+    # data = json_str['data']
+    # for i in data:
+    #     print(get_html(urls=url, proxy=i))
+    get_html(urls=url, proxy=get_proxy())
 
-    user_dic = json.loads(str)
-    print(user_dic['data'])
-    for page in range(10):
-        # url = 'https://www.douban.com/group/search?cat=1019&q={}'.format('上海')
-        url = 'https://www.douban.com'
-        # proxy_url = 'http://tiqu.pyhttp.taolop.com/getflowip?count=5&neek=15925&type=2&sep=4&sb=&ip_si=1&mr=0'
-        # proxys = get_proxy(proxy_url)
-        # print(proxys)
-        # text = get_html(url)  # 获取网页内容
-        # print(text)
-        # soup = BeautifulSoup("<html>A Html Text</html>", "html.parser")
-        # ana_by_bs4(text)  # bs4方式解析
+# for page in range(10):
+# url = 'https://www.douban.com/group/search?cat=1019&q={}'.format('上海')
+# url = 'https://www.douban.com'
+# proxy_url = 'http://tiqu.pyhttp.taolop.com/getflowip?count=5&neek=15925&type=2&sep=4&sb=&ip_si=1&mr=0'
+# proxys = get_proxy(proxy_url)
+# print(proxys)
+# text = get_html(url)  # 获取网页内容
+# print(text)
+# soup = BeautifulSoup("<html>A Html Text</html>", "html.parser")
+# ana_by_bs4(text)  # bs4方式解析
