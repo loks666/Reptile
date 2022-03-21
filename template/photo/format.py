@@ -1,8 +1,23 @@
 import re
 
 headerStr = '''
-Cookie: partner=www_baidu_com; privacy=1646901513; guid=525a26680b65dbdc7d66ac5731ba94d4; _ujz=MTE5ODA5MDY4MA%3D%3D; ps=needv%3D0; 51job=cuid%3D119809068%26%7C%26cusername%3DoCb1tjRgY6YJfZhC%252BaGbiHdHTJVz6A83g3hiq91DlS0%253D%26%7C%26cpassword%3D%26%7C%26cname%3DBqsrJLJyQv%252FpAXXFE9gutw%253D%253D%26%7C%26cemail%3DJ5%252BFrwLJnPDCk0J9ULel1WbaLINjrGFAS1NCfZJ%252B%252Bss%253D%26%7C%26cemailstatus%3D3%26%7C%26cnickname%3D%26%7C%26ccry%3D.0E32uEq7S%252Fps%26%7C%26cconfirmkey%3DsusZmAPbfBWbA%26%7C%26cautologin%3D1%26%7C%26cenglish%3D0%26%7C%26sex%3D0%26%7C%26cnamekey%3DsuwuP%252FdZxo6D.%26%7C%26to%3D456eb4d89dd23b760fe32bae830511ac6229b910%26%7C%26; slife=lowbrowser%3Dnot%26%7C%26lastlogindate%3D20220310%26%7C%26securetime%3DV2sGMwNhBWdeNVRqWGIBb1RlATY%253D; nsearch=jobarea%3D%26%7C%26ord_field%3D%26%7C%26recentSearch0%3D%26%7C%26recentSearch1%3D%26%7C%26recentSearch2%3D%26%7C%26recentSearch3%3D%26%7C%26recentSearch4%3D%26%7C%26collapse_expansion%3D; search=jobarea%7E%60000000%7C%21ord_field%7E%600%7C%21recentSearch0%7E%60000000%A1%FB%A1%FA000000%A1%FB%A1%FA0000%A1%FB%A1%FA00%A1%FB%A1%FA99%A1%FB%A1%FA%A1%FB%A1%FA99%A1%FB%A1%FA99%A1%FB%A1%FA99%A1%FB%A1%FA99%A1%FB%A1%FA9%A1%FB%A1%FA99%A1%FB%A1%FA%A1%FB%A1%FA0%A1%FB%A1%FA%D3%CE%CF%B7%A1%FB%A1%FA2%A1%FB%A1%FA1%7C%21
-
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9
+Accept-Encoding: gzip, deflate, br
+Accept-Language: zh-CN,zh;q=0.9,ru;q=0.8
+Cache-Control: max-age=0
+Connection: keep-alive
+Cookie: channelid=0; sid=1647833513314527; _ga=GA1.2.1486380935.1647835097; _gid=GA1.2.1973847089.1647835097; Hm_lvt_7ed65b1cc4b810e9fd37959c9bb51b31=1647835097; _gcl_au=1.1.469411156.1647835102; _gat=1; Hm_lpvt_7ed65b1cc4b810e9fd37959c9bb51b31=1647835235
+Host: www.kuaidaili.com
+Referer: https://www.baidu.com/link?url=XgTbbyU_rsasv9AjmGK-Dx0cH3X7HPgzeA8Pv_AP-B4WEl6wHFOmUQUQemuZFHhn&wd=&eqid=d7ac94e2000007be000000046237f7db
+sec-ch-ua: " Not A;Brand";v="99", "Chromium";v="99", "Google Chrome";v="99"
+sec-ch-ua-mobile: ?0
+sec-ch-ua-platform: "Windows"
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+Sec-Fetch-User: ?1
+Upgrade-Insecure-Requests: 1
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/99.0.4844.74 Safari/537.36
 '''
 ret = ""
 for i in headerStr:

@@ -4,7 +4,8 @@ import csv
 import json
 import sys
 import time
-
+from requests.adapters import HTTPAdapter
+from requests.packages.urllib3.util.ssl_ import create_urllib3_context
 import requests  # 获取网页内容
 from bs4 import BeautifulSoup  # 解析网页内容
 
@@ -13,14 +14,15 @@ from lxml import etree
 
 session = requests.session()
 header = {
-    'Accept': 'text.txt/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+    'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
     'Accept-Encoding': 'gzip, deflate, br',
-    'Accept-Language': 'zh-CN,zh;q=0.9',
+    'Accept-Language': 'zh-CN,zh;q=0.9,ru;q=0.8',
     'Cache-Control': 'max-age=0',
     'Connection': 'keep-alive',
-    'Cookie': 'partner=www_baidu_com; privacy=1646901513; guid=525a26680b65dbdc7d66ac5731ba94d4; _ujz=MTE5ODA5MDY4MA%3D%3D; ps=needv%3D0; 51job=cuid%3D119809068%26%7C%26cusername%3DoCb1tjRgY6YJfZhC%252BaGbiHdHTJVz6A83g3hiq91DlS0%253D%26%7C%26cpassword%3D%26%7C%26cname%3DBqsrJLJyQv%252FpAXXFE9gutw%253D%253D%26%7C%26cemail%3DJ5%252BFrwLJnPDCk0J9ULel1WbaLINjrGFAS1NCfZJ%252B%252Bss%253D%26%7C%26cemailstatus%3D3%26%7C%26cnickname%3D%26%7C%26ccry%3D.0E32uEq7S%252Fps%26%7C%26cconfirmkey%3DsusZmAPbfBWbA%26%7C%26cautologin%3D1%26%7C%26cenglish%3D0%26%7C%26sex%3D0%26%7C%26cnamekey%3DsuwuP%252FdZxo6D.%26%7C%26to%3D456eb4d89dd23b760fe32bae830511ac6229b910%26%7C%26; slife=lowbrowser%3Dnot%26%7C%26lastlogindate%3D20220310%26%7C%26securetime%3DV2sGMwNhBWdeNVRqWGIBb1RlATY%253D; nsearch=jobarea%3D%26%7C%26ord_field%3D%26%7C%26recentSearch0%3D%26%7C%26recentSearch1%3D%26%7C%26recentSearch2%3D%26%7C%26recentSearch3%3D%26%7C%26recentSearch4%3D%26%7C%26collapse_expansion%3D; search=jobarea%7E%60000000%7C%21ord_field%7E%600%7C%21recentSearch0%7E%60000000%A1%FB%A1%FA000000%A1%FB%A1%FA0000%A1%FB%A1%FA00%A1%FB%A1%FA99%A1%FB%A1%FA%A1%FB%A1%FA99%A1%FB%A1%FA99%A1%FB%A1%FA99%A1%FB%A1%FA99%A1%FB%A1%FA9%A1%FB%A1%FA99%A1%FB%A1%FA%A1%FB%A1%FA0%A1%FB%A1%FA%D3%CE%CF%B7%A1%FB%A1%FA2%A1%FB%A1%FA1%7C%21',
-    'Host': 'search.51job.com',
-    'sec-ch-ua': '" Not;A Brand";v="99", "Google Chrome";v="97", "Chromium";v="97"',
+    'Cookie': 'gravatar=images%2Fnone.jpg%3Faabb90b74fcc8ca2819178850c2a27ca; username=jax; phone=16621370084; mail=284190056%40qq.com; password=3369d4e61137f46fc0750552377743cb; https_waf_cookie=4b298858-77ce-4134fa046acee5f3c9ceaf61d0d489bca261; Hm_lvt_96901db7af1741c2fd2d52f310d78eaa=1647599297; Hm_lvt_c4dd741ab3585e047d56cf99ebbbe102=1647599389; Hm_lpvt_c4dd741ab3585e047d56cf99ebbbe102=1647599389; Hm_lpvt_96901db7af1741c2fd2d52f310d78eaa=1647600462; _dx_captcha_cid=14828343; _dx_uzZo5y=edc326160ff89339a68193cd4b791cf8ecfe7779217874315f7416da6ff9921dc01158a4; _dx_app_5157233da7fa2b042f57a03a578281c0=62346354cbjOVpvwX57AqseL7lhNXHzJuguAW3h1; _dx_captcha_vid=0D112B1C50BE02FB650413377ACEBF825E82B11009E42F14420B9B0393EA67533C3C84AAF08C4B53DB742A63C84AEE750F69FAF990940CE631C57100AE80845159834A7B802D89A633AF23FC77FCD517',
+    'Host': 'proxy.ip3366.net',
+    'Referer': 'https://proxy.ip3366.net/user/',
+    'sec-ch-ua': '" Not A;Brand";v="99", "Chromium";v="99", "Google Chrome";v="99"',
     'sec-ch-ua-mobile': '?0',
     'sec-ch-ua-platform': '"Windows"',
     'Sec-Fetch-Dest': 'document',
@@ -28,14 +30,90 @@ header = {
     'Sec-Fetch-Site': 'same-origin',
     'Sec-Fetch-User': '?1',
     'Upgrade-Insecure-Requests': '1',
-    'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/97.0.4692.99 Safari/537.36'
+    'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/99.0.4844.74 Safari/537.36'
 }
+
+
+# 从json文件中获取代理信息，如果文件或获取为空，就重新创建
+def open_file_proxies():
+    # noinspection PyBroadException
+    try:
+        with open("proxies.txt", 'r') as file:
+            data = json.loads(file.read())
+            print(data)
+    except Exception as e:
+        print(e)
+        return {}
+    if data is None:
+        return {}
+    else:
+        return data
+
+
+def get_free_proxies():
+    url = "https://proxy.ip3366.net/free/"
+    res = session.get(url)
+    # 前面省略，从下面直奔主题，举个代码例子：
+    print(res.text)
+
+
+def remove_null(param_list):
+    while '' in param_list:
+        param_list.remove('')
+    return param_list
+
+
+def get_proxies():
+    global proxies
+    if 'http' in proxies.keys():
+        http_list = proxies['http']
+    else:
+        http_list = []
+    if 'https' in proxies.keys():
+        https_list = proxies['https']
+    else:
+        https_list = []
+    # http
+    for i in range(2000):
+        url1 = "http://dev.qydailiip.com/api/?apikey=874df86c53e50488a155a1c96982ba448fc284bc&num=1000&type=json&line=win&proxy_type=putong&sort=4&model=all&protocol=http&address=&kill_address=&port=&kill_port=&today=false&abroad=1&isp=&anonymity="
+        res1 = session.get(url1)
+        tmp = remove_null(json.loads(res1.text))
+        http_list = http_list + tmp
+        time.sleep(5)
+
+    # https
+    for i in range(2000):
+        url2 = "http://dev.qydailiip.com/api/?apikey=874df86c53e50488a155a1c96982ba448fc284bc&num=1000&type=json&line=win&proxy_type=putong&sort=4&model=all&protocol=https&address=&kill_address=&port=&kill_port=&today=false&abroad=1&isp=&anonymity="
+        res2 = session.get(url2)
+        tmp = remove_null(json.loads(res2.text))
+        https_list = https_list + tmp
+        time.sleep(5)
+    # 前面省略，从下面直奔主题，举个代码例子：
+    # http = '//' + res.text.strip()
+    proxies['http'] = http_list
+    proxies['https'] = https_list
+    print(proxies)
+    json_str = json.dumps(proxies, indent=4)
+    with open("proxies.txt", 'a+') as json_file:
+        json_file.write(json_str)
+    print("加载入文件完成...")
+    # https = '//' + res.text.strip()
+    # proxies_str = {
+    #     'http': http,
+    #     'https': https
+    # }
+    # print('代理信息：' + str(proxies_str))
+    return proxies
+
+
+proxies = open_file_proxies()
+if not proxies:
+    get_proxies()
 
 
 def post_job(job_info):
     url = 'https://i.51job.com/delivery/delivery.php?rand=0.658666866743314&jsoncallback=jQuery183020401877146455116_1646912559272&jobid=({}%3A1_0)&prd=search.51job.com&prp=sou_sou_soulb&cd=search.51job.com&cp=search_list&resumeid=&cvlan=&coverid=&qpostset=&elementname=delivery_jobid_{}&deliverytype=1&deliverydomain=%2F%2Fi.51job.com&language=c&imgpath=%2F%2Fimg01.51jobcdn.com&_=1646912565703'
     for job in job_info:
-        # time.sleep(1)
         url = url.format(job['岗位id'], job['岗位id'])
         res = session.get(url, headers=header)
         # 获取网页，并带有伪装的浏览器头，一般好的网站会有检测是不是程序访问
@@ -71,28 +149,11 @@ def get_job_ids(num):
     return result
 
 
-def get_proxies():
-    url = "http://webapi.http.zhimacangku.com/getip?num=1&type=1&pro=&city=0&yys=0&port=1&pack=221347&ts=0&ys=0&cs=0&lb=1&sb=0&pb=4&mr=1&regions="
+def get_free_proxies():
+    url = "http://proxy.ip3366.net/free/?action=china&page=101"
     res = session.get(url)
-    if '请2秒后再试' in res.text:
-        time.sleep(2)
-        get_proxies()
-    # print('获取http ip为：' + res.text.txt)
-    http = '//' + res.text.strip()
-    time.sleep(2)
-    url = "http://webapi.http.zhimacangku.com/getip?num=1&type=1&pro=&city=0&yys=0&port=11&pack=221347&ts=0&ys=0&cs=0&lb=1&sb=0&pb=4&mr=1&regions="
-    res = session.get(url)
-    if '请2秒后再试' in res.text:
-        time.sleep(2)
-        get_proxies()
-    # print('获取https ip为：' + res.text.txt)
-    https = '//' + res.text.strip()
-    proxies = {
-        'http': http,
-        'https': https
-    }
-    print('代理信息：' + str(proxies))
-    return proxies
+    print(res.text)
+    pass
 
 
 def assembly_param(data):
@@ -146,13 +207,15 @@ def test_post(id):
 
 if __name__ == '__main__':
     print()
-    for i in range(1, 500):
-        data = get_job_ids(i)
-        # with open('test.txt', encoding="utf-8") as f:
-        #     data = f.read()
-        jobs = assembly_param(data)
-        if jobs:
-            post_job(jobs)
+    print(proxies['http'])
+    print(proxies['https'])
+    # for i in range(1, 500):
+    #     data = get_job_ids(i)
+    #     with open('proxies.txt', encoding="utf-8") as f:
+    #         data = f.read()
+    #     jobs = assembly_param(data)
+    #     if jobs:
+    #         post_job(jobs)
 
     # test_post('138745002')
     # get_proxies()
