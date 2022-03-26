@@ -137,7 +137,8 @@ def post_job(job_info):
 def get_job_ids(num):
     url = 'https://search.51job.com/list/020000,000000,0000,00,9,99,{},2,{}.html?lang=c&postchannel=0000&workyear=99&cotype=99&degreefrom=99&jobterm=99&companysize=99&ord_field=0&dibiaoid=0&line=&welfare='.format(
         'java', num)
-    res = session.get(url, headers=header, proxies=get_proxies())
+    # res = session.get(url, headers=header, proxies=get_proxies())
+    res = session.get(url, headers=header)
     # 获取网页，并带有伪装的浏览器头，一般好的网站会有检测是不是程序访问
     res.encoding = res.apparent_encoding  # 设置编码，防止乱码
     html = etree.HTML(res.text)
@@ -200,7 +201,8 @@ def assembly_param(data):
 def test_post(id):
     url = 'https://i.51job.com/delivery/delivery.php?rand=0.658666866743314&jsoncallback=jQuery183020401877146455116_1646912559272&jobid=({}%3A1_0)&prd=search.51job.com&prp=sou_sou_soulb&cd=search.51job.com&cp=search_list&resumeid=&cvlan=&coverid=&qpostset=&elementname=delivery_jobid_{}&deliverytype=1&deliverydomain=%2F%2Fi.51job.com&language=c&imgpath=%2F%2Fimg01.51jobcdn.com&_=1646912565703'.format(
         id, id)
-    res = session.get(url, headers=header, proxies=get_proxies())
+    # res = session.get(url, headers=header, proxies=get_proxies())
+    res = session.get(url, headers=header)
     # 获取网页，并带有伪装的浏览器头，一般好的网站会有检测是不是程序访问
     print(res)
 

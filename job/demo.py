@@ -1,71 +1,74 @@
 import re
+import sys
 import time
-
-from bs4 import  BeautifulSoup
-from selenium.common.exceptions import TimeoutException
+from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support import expected_conditions as EC
 from selenium import webdriver
-from pyquery import pyquery
 from selenium.webdriver.support.wait import WebDriverWait
-import os
 
-chromedriver = "chromedriver.exe"
-os.environ["webdriver.Chrome.driver"] = chromedriver
-
-browser = webdriver.Chrome(chromedriver)
+s = Service(executable_path=r'chromedriver.exe')
+browser = webdriver.Chrome(service=s)
 browser.maximize_window()
-
-url = 'http://biz.smpaa.cn/ysxtqxcp/login.jsp'
+url = 'https://login.51job.com/login.php?loginway=0&isjump=0&lang=c&from_domain=i&url='
 wait = WebDriverWait(browser, 10)
 
 
 def login():
     browser.get(url)
-    input_keys('//*[@id="loginName"]', 'zk1509005!')
-    input_keys('//*[@id="password"]', '18412914!')
-    click('//*[@id="captcha"]')
-    time.sleep(1)
-    click('/html/body/div[2]/div[2]/div[2]/div/div[1]')
-
-    browser.refresh()
-    # 点击企业
-    click('//*[@id="mainSplitter"]/div/div[1]/div/div/div/ul/li/a')
-    # 信息查询
-    click('//*[@id="mini-3$3"]/div[1]/div[2]')
-    # 采购单信息查询
-    click('//*[@id="10202004$text"]')
-
-    # browser.find_element_by_xpath('//*[@id="mini-27"]/div[1]/table/tbody/tr/td[1]/span[3]/input')
-    # 查询
-    time.sleep(1)
-
-def get_data():
-    html = browser.page_source
-    with open('test.text', 'w') as f:
-        f.write(html)
-    soup = BeautifulSoup(html, 'lxml')
-    table = soup.find('div', class_="mini-toolbar")
-    print(table)
-    # print(html)
-    # items = doc('#dgCgdxx > div > div.mini-panel-viewport.mini-grid-viewport > div.mini-panel-body.mini-grid-rows > div.mini-grid-rows-view > div > table > tbody').items()
-    # for item in items:
-    #     print(item)
+    input_keys('//*[@id="loginname"]', '16621370084')
+    input_keys('//*[@id="password"]', 'l284190056')
+    click('//*[@class="check"]')
+    time.sleep(4)
+    click('//*[@id="login_btn_withPwd"]')
+    time.sleep(4)
 
 
-def next_page():
+def get_image_url(self, xpath):
+    link = re.compile(
+        'background-image: url\("(.*?)"\); width: 30px; height: 100px; background-position: (.*?)px (.*?)px;')
+    elements = self.driver.find_elements_by_xpath(xpath)
+    image_url = None
+    location = list()
+    for element in elements:
+        style = element.get_attribute("style")
+        groups = link.search(style)
+
+        url = groups[1]
+        x_pos = groups[2]
+        y_pos = groups[3]
+
+        location.append((int(x_pos), int(y_pos)))
+        image_url = url
+    return image_url, location
+
+
+def get_page():
+    post = 'https://search.51job.com/list/020000,000000,0000,32%252c01%252c40%252c38%252c03,9,99,java,2,1.html?lang=c&postchannel=0000&workyear=99&cotype=99&degreefrom=99&jobterm=99&companysize=99&ord_field=0&dibiaoid=0&line=&welfare='
+    browser.get(post)
+    page_num = wait.until(
+        EC.presence_of_element_located((By.XPATH, '/html/body/div[2]/div[3]/div/div[1]/div[2]/div[1]'))).text
+    print('page is :' + page_num)
+    return int(page_num.split('/')[-1].strip())
+
+
+def send_post():
+    # noinspection PyBroadException
     try:
-        # 点击下一页
-        click('//*[@id="mini-33"]')
-    except TimeoutException:
-        next_page()
+        click('/html/body/div[2]/div[3]/div/div[1]/div[1]/span[1]/em')
+        click('/html/body/div[2]/div[3]/div/div[1]/div[2]/div[2]/button[2]')
+        time.sleep(1)
+        browser.refresh()
+        click('//a[@class="e_icons i_next"]')
+    except Exception:
+        send_post()
 
 
 # css文本输入
 def input_keys(selector, keys):
-    input = wait.until(EC.presence_of_element_located((By.XPATH, selector)))
-    input.clear()
-    input.send_keys(keys)
+    inputs = wait.until(EC.presence_of_element_located((By.XPATH, selector)))
+    inputs.clear()
+    inputs.send_keys(keys)
 
 
 # 点击
@@ -74,16 +77,12 @@ def click(selector):
     button.click()
 
 
-
-def main():
-    login()
-    get_data()
-    # search()
-    # page_size = int(search())
-    # for i in range(2, page_size + 1):
-    #     next_page(i)
-
-
-
 if __name__ == '__main__':
-    main()
+    login()
+    page = get_page()
+    page = 182
+    print(page)
+    for i in range(1, page + 1):
+        send_post()
+    print('投递完毕！')
+    browser.quit()
