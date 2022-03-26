@@ -211,13 +211,13 @@ if __name__ == '__main__':
     print()
     print(proxies['http'])
     print(proxies['https'])
-    # for i in range(1, 500):
-    #     data = get_job_ids(i)
-    #     with open('proxies.txt', encoding="utf-8") as f:
-    #         data = f.read()
-    #     jobs = assembly_param(data)
-    #     if jobs:
-    #         post_job(jobs)
+    for i in range(1, 500):
+        data = get_job_ids(i)
+        with open('proxies.txt', encoding="utf-8") as f:
+            data = f.read()
+        jobs = assembly_param(data)
+        if jobs:
+            post_job(jobs)
 
     # test_post('138745002')
     # get_proxies()
