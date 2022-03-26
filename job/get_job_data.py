@@ -11,9 +11,22 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support import expected_conditions as EC
 from selenium import webdriver
 from selenium.webdriver.support.wait import WebDriverWait
+from selenium.webdriver import ChromeOptions
 
 s = Service(executable_path=r'chromedriver.exe')
-browser = webdriver.Chrome(service=s)
+options = ChromeOptions()
+options.headless = True
+options.add_experimental_option('excludeSwitches', ['enable-automation'])
+options.add_experimental_option('useAutomationExtension', False)
+browser = webdriver.Chrome(service=s, options=options)
+browser.execute_cdp_cmd("Page.addScriptToEvaluateOnNewDocument", {
+  "source": """
+    Object.defineProperty(navigator, 'webdriver', {
+      get: () => undefined
+    })
+  """
+})
+
 browser.maximize_window()
 url = 'https://login.51job.com/login.php?loginway=0&isjump=0&lang=c&from_domain=i&url='
 wait = WebDriverWait(browser, 10)
@@ -21,8 +34,8 @@ wait = WebDriverWait(browser, 10)
 
 def login():
     browser.get(url)
-    input_keys('//*[@id="loginname"]', '16621370084')
-    input_keys('//*[@id="password"]', 'l284190056')
+    input_keys('//*[@id="loginname"]', 'zhanghuming')
+    input_keys('//*[@id="password"]', 'mima')
     click('//*[@class="check"]')
     time.sleep(1)
     click('//*[@id="login_btn_withPwd"]')
