@@ -19,9 +19,9 @@ def login():
     input_keys('//*[@id="loginname"]', '16621370084')
     input_keys('//*[@id="password"]', 'l284190056')
     click('//*[@class="check"]')
-    time.sleep(4)
+    time.sleep(1)
     click('//*[@id="login_btn_withPwd"]')
-    time.sleep(4)
+    time.sleep(1)
 
 
 def get_image_url(self, xpath):
@@ -44,11 +44,11 @@ def get_image_url(self, xpath):
 
 
 def get_page():
-    post = 'https://search.51job.com/list/020000,000000,0000,32%252c01%252c40%252c38%252c03,9,99,java,2,1.html?lang=c&postchannel=0000&workyear=99&cotype=99&degreefrom=99&jobterm=99&companysize=99&ord_field=0&dibiaoid=0&line=&welfare='
+    post = 'https://search.51job.com/list/020000,000000,0000,00,9,99,java,2,1.html?lang=c&postchannel=0000&workyear=99&cotype=99&degreefrom=99&jobterm=99&companysize=99&ord_field=0&dibiaoid=0&line=&welfare='
     browser.get(post)
     page_num = wait.until(
         EC.presence_of_element_located((By.XPATH, '/html/body/div[2]/div[3]/div/div[1]/div[2]/div[1]'))).text
-    print('page is :' + page_num)
+    # print('page is :' + page_num)
     return int(page_num.split('/')[-1].strip())
 
 
@@ -57,7 +57,7 @@ def send_post():
     try:
         click('/html/body/div[2]/div[3]/div/div[1]/div[1]/span[1]/em')
         click('/html/body/div[2]/div[3]/div/div[1]/div[2]/div[2]/button[2]')
-        time.sleep(1)
+        time.sleep(4)
         browser.refresh()
         click('//a[@class="e_icons i_next"]')
     except Exception:
@@ -80,9 +80,8 @@ def click(selector):
 if __name__ == '__main__':
     login()
     page = get_page()
-    page = 182
     print(page)
-    for i in range(1, page + 1):
+    for i in range(1, page):
         send_post()
     print('投递完毕！')
     browser.quit()
