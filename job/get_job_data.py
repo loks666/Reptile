@@ -13,7 +13,8 @@ from selenium import webdriver
 from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver import ChromeOptions
 
-s = Service(executable_path=r'chromedriver.exe')
+# s = Service(executable_path=r'chromedriver.exe')
+s = Service(executable_path=r'chromedriver')
 options = ChromeOptions()
 options.headless = True
 options.add_experimental_option('excludeSwitches', ['enable-automation'])
