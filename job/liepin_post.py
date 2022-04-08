@@ -7,7 +7,7 @@ from selenium.webdriver.support import expected_conditions as EC
 from selenium import webdriver
 from selenium.webdriver.support.wait import WebDriverWait
 
-s = Service(executable_path=r'chromedriver.exe')
+s = Service(executable_path=r'../51job/chromedriver.exe')
 browser = webdriver.Chrome(service=s)
 browser.maximize_window()
 url = 'https://login.51job.com/login.php?loginway=0&isjump=0&lang=c&from_domain=i&url='
