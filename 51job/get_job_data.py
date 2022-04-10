@@ -142,7 +142,7 @@ def insert_data():
     global joblist
     # 插入sql语句
     # sql = "insert into school (schoolId,schoolName,schoolNum,location,level,served) values (%s,%s,%s,%s,%s,%s)"
-    sql = "INSERT INTO `post`.`51job`(`com_id`, `com_name`, `com_type`, `com_count`, `com_url`, `salary`, `job_name`, `job_id`, `job_type`, `job_benefits`, `job_req`, `job_url`, `update_time`) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)"
+    sql = "INSERT INTO `post`.`51job`(`com_id`, `com_name`, `com_type`, `com_count`, `com_url`, `search_key`,`salary`, `job_name`, `job_id`, `job_type`, `job_benefits`, `job_req`, `job_url`, `update_time`, `base`, `area`) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)"
     # 执行插入操作
     con = create_connector()
     cursor = con.cursor()
@@ -157,13 +157,23 @@ def insert_data():
         job_type = post['岗位类型']
         job_benefits = post['公司福利']
         job_req = post['岗位要求']
+        split = job_req.split(',')
+        city = split[0]
+        if '-' in city:
+            split = city.split('-')
+            base = split[0]
+            area = split[1]
+        else:
+            base = city
+            area = city
         job_url = post['岗位url']
         com_url = post['公司url']
         # 2022-03-25 08:16:50
         update_time = datetime.strptime(post['更新时间'], '%Y-%m-%d %H:%M:%S')
         insert = cursor.execute(sql, (
-            com_id, com_name, com_type, com_count, com_url, salary, job_name, job_id, job_type, job_benefits, job_req,
-            job_url, update_time))
+            com_id, com_name, com_type, com_count, com_url, search_key, salary, job_name, job_id, job_type,
+            job_benefits, job_req,
+            job_url, update_time, base, area))
         # print(insert)
         joblist.append(job_id)
     con.commit()  # 增加，修改，删除数据必须提交
@@ -172,7 +182,7 @@ def insert_data():
     con.close()
 
 
-def get_all_data(target):
+def get_all_data(target, key):
     page = get_page(target)
     print('获取总页数为： ' + str(page))
     for i in range(page):
@@ -224,5 +234,7 @@ def multithreaded():
 
 
 if __name__ == '__main__':
-    url = 'https://search.51job.com/list/010000%252c030200%252c040000%252c020000,000000,0000,00,9,99,java,2,1.html?lang=c&postchannel=0000&workyear=99&cotype=99&degreefrom=99&jobterm=99&companysize=99&ord_field=0&dibiaoid=0&line=&welfare='
-    get_all_data(url)
+    search_key = 'java'
+    url = 'https://search.51job.com/list/010000%252c030200%252c040000%252c020000,000000,0000,00,9,99,{},2,1.html?lang=c&postchannel=0000&workyear=99&cotype=99&degreefrom=99&jobterm=99&companysize=99&ord_field=0&dibiaoid=0&line=&welfare='.format(
+        search_key)
+    get_all_data(url, search_key)
