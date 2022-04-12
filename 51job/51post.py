@@ -82,6 +82,7 @@ if __name__ == '__main__':
     page = get_page()
     print(page)
     for i in range(1, page):
+        print('正在投递 第 {} 页的职位。。。'.format(i))
         send_post()
     print('投递完毕！')
     browser.quit()

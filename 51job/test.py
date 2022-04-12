@@ -1,4 +1,5 @@
-if __name__ == '__main__':
-    job_req = '上海-徐汇区'
-    print(str)
+import datetime
 
+if __name__ == '__main__':
+    time1 = datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S')
+    print(time1)

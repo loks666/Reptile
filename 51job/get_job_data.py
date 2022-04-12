@@ -142,7 +142,7 @@ def insert_data():
     global joblist
     # 插入sql语句
     # sql = "insert into school (schoolId,schoolName,schoolNum,location,level,served) values (%s,%s,%s,%s,%s,%s)"
-    sql = "INSERT INTO `post`.`51job`(`com_id`, `com_name`, `com_type`, `com_count`, `com_url`, `search_key`,`salary`, `job_name`, `job_id`, `job_type`, `job_benefits`, `job_req`, `job_url`, `update_time`, `base`, `area`) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)"
+    sql = "INSERT INTO `post`.`51job`(`com_id`, `com_name`, `com_type`, `com_count`, `com_url`, `search_key`,`salary`, `job_name`, `job_id`, `job_type`, `job_benefits`, `job_req`, `job_url`, `base`, `area`, `update_time`, `insert_time`) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s , %s)"
     # 执行插入操作
     con = create_connector()
     cursor = con.cursor()
@@ -170,10 +170,11 @@ def insert_data():
         com_url = post['公司url']
         # 2022-03-25 08:16:50
         update_time = datetime.strptime(post['更新时间'], '%Y-%m-%d %H:%M:%S')
+        insert_time = datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S')
         insert = cursor.execute(sql, (
             com_id, com_name, com_type, com_count, com_url, search_key, salary, job_name, job_id, job_type,
             job_benefits, job_req,
-            job_url, update_time, base, area))
+            job_url, base, area, update_time, insert_time))
         # print(insert)
         joblist.append(job_id)
     con.commit()  # 增加，修改，删除数据必须提交
