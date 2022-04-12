@@ -12,7 +12,6 @@ def analysis_data():
     values = []
     for key in joblist[0].keys():
         for job in joblist:
-            # print(key)
             print(values.append(job[key]))
         print(len(values))
         wordlist = jieba.cut_for_search(''.join(values))
