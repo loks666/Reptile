@@ -1,5 +1,6 @@
 import pymysql
 import jieba.analyse
+from matplotlib import pyplot as plt
 from stylecloud import gen_stylecloud
 
 
@@ -29,7 +30,8 @@ def generate_img(text, img_name):
                    font_path='msyh.ttc',
                    background_color='white',
                    output_name=img_name,
-                   custom_stopwords=['有限公司', '万', '月', '经验', '公司', '工程师', '新区', '山区', '区', '人', '科技', '股份', '有限', '信息', '技术', '科技股份', '信息技术', '公司', '招'])
+                   custom_stopwords=['有限公司', '万', '月', '经验', '公司', '工程师', '新区', '山区', '区', '人', '科技', '股份', '有限', '信息',
+                                     '技术', '科技股份', '信息技术', '公司', '招'])
 
 
 def create_connector():
@@ -43,6 +45,15 @@ def create_connector():
         # autocommit=True,    # 如果插入数据，， 是否自动提交? 和conn.commit()功能一致。
     )
     return conn
+
+
+def column():
+    plt.hist(df['月工资'], bins=24)
+    plt.xlabel('工资(万元)')
+    plt.ylabel('次数')
+    plt.title('薪资直方图')
+    plt.savefig('histogram.jpg')
+    plt.show()
 
 
 def get_joblist():
