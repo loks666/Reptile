@@ -57,7 +57,7 @@ def send_post():
     try:
         click('/html/body/div[2]/div[3]/div/div[1]/div[1]/span[1]/em')
         click('/html/body/div[2]/div[3]/div/div[1]/div[2]/div[2]/button[2]')
-        time.sleep(4)
+        time.sleep(2)
         browser.refresh()
         click('//a[@class="e_icons i_next"]')
     except Exception:
