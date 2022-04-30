@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>柱形图</title>
+    <title>饼图</title>
     <!--引入echarts.js这个文件-->
     <script src="../js/echarts.js"></script>
 </head>
@@ -14,31 +14,31 @@
         var mychart = echarts.init(document.getElementById("main"))
         // 配置项和配置数据
         var option = {
-            // 标题
             title:{
                 text:'饼图'
             },
             tooltip:{},
-            // 图例
             legend:{
-                data:["直接访问","软件营销","联盟广告","视频广告","搜索引擎"]
+                data:["直接访问","邮件营销","联盟广告","视频广告","搜索引擎"]
             },
-            series:[{
-                type:'pie',
-                radius:'55%',
-                center:["50%","50%"],
-                data:[
-                    {name:'直接访问',value:336},
-                    {name:'软件营销',value:125},
-                    {name:'联盟广告',value:272},
-                    {name:'视频广告',value:725},
-                    {name:'搜索引擎',value:934},
-                ],
-                roseType:'radius'
-            }]
-
+            series:[
+                {
+                    type:'pie',
+                    radius:'55%',
+                    center:['50%','50%'],
+                    data:[
+                        {name:'直接访问',value:335},
+                        {name:'邮件营销',value:720},
+                        {value:135,name:"联盟广告"},
+                        {value:500,name:"视频广告"},
+                        {value:235,name:"搜索引擎"}
+                    ],
+                    roseType:'radius',
+                }
+            ]
         };
         mychart.setOption(option)
     </script>
+
 </body>
 </html>

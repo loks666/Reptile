@@ -9,6 +9,7 @@ from selenium.webdriver.support.wait import WebDriverWait
 
 s = Service(executable_path=r'chromedriver.exe')
 browser = webdriver.Chrome(service=s)
+browser.set_window_position(3841, 0)
 browser.maximize_window()
 url = 'https://login.51job.com/login.php?loginway=0&isjump=0&lang=c&from_domain=i&url='
 wait = WebDriverWait(browser, 10)

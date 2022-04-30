@@ -67,7 +67,7 @@ a:hover{ color:#06c; text-decoration: none!important}
 .boxfoot:after{ position:absolute; width: .1rem; height: .1rem;  content: "";border-bottom: 2px solid #02a6b5; bottom: 0;}
 
 .bar{background:rgba(101,132,226,.1); padding: .15rem;}
-.barbox li,.barbox2 li{ text-align: center; position: relative; z-index: 100;}
+.barbox li,.barbox2 li{ width:50%; text-align: center; position: relative; z-index: 100;}
 .barbox:before,
 .barbox:after{ position:absolute; width: .3rem; height: .1rem; content: ""; }
 .barbox:before{border-left: 2px solid #02a6b5;left: 0;border-top: 2px solid #02a6b5; }

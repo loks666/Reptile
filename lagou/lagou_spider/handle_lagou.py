@@ -38,7 +38,6 @@ class HandleLaGou(object):
         self.lagou_session.cookies.clear()
 
     def city_job(self, city):
-
         get_response = self.handle_request("get", get_url % city)
         total_num = etree.HTML(get_response).xpath('//span[@class="span totalNum"]/text()')
         total_num = total_num[0]
@@ -71,14 +70,15 @@ class HandleLaGou(object):
                                                       timeout=6)
                     response.encoding = 'utf-8'
                 elif method == 'post':
-                    response = self.lagou_session.post(url=url, headers=self.header, data=data, verify=False,
+                    response = self.lagou_session.post(url=url, headers=self.header, data=data, verify=None,
                                                        proxies=None, timeout=6)
-            except:
+            except Exception as e:
+                print(e)
                 # 清除cookies信息
                 self.lagou_session.cookies.clear()
                 # 重新获取cookies信息
                 self.handle_request("get", get_url % info)
-                time.sleep(10)
+                # time.sleep(10)
             response.encoding = 'utf-8'
             if '频繁' in response.text:
                 print(response.text)
@@ -86,7 +86,7 @@ class HandleLaGou(object):
                 self.lagou_session.cookies.clear()
                 # 重新获取cookies信息
                 self.handle_request("get", get_url % info)
-                time.sleep(10)
+                # time.sleep(10)
                 continue
             return response.text
 
@@ -97,6 +97,7 @@ if __name__ == '__main__':
     # 引入多进程加速抓取
     pool = multiprocessing.Pool(3)
     for city in lagou.city_list:
+        print('进来了')
         pool.apply_async(lagou.city_job, args=(city,))
     pool.close()
     pool.join()
