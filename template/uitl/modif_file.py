@@ -5,6 +5,9 @@ import shutil
 import numpy as np
 from PIL import Image
 import os
+import datetime
+
+nowTime = datetime.datetime.now().strftime("%Y-%m-%d-%H-%M-%S")
 
 
 def remove_file(old_path, new_path):
@@ -73,8 +76,6 @@ def is_same(same1, same2):
 
 
 def distinct():
-    load_path = 'E:\\total'  # 要去重的文件夹
-    save_path = 'E:\\test'  # 空文件夹，用于存储检测到的重复的照片
     os.makedirs(save_path, exist_ok=True)
 
     # 获取图片列表 file_map，字典{文件路径filename : 文件size_image_size}
@@ -85,6 +86,7 @@ def distinct():
         # for dirname in dirname:
         # print('parent is %s, dirname is %s' % (parent, dirname))
         for filename in filenames:
+            print(filename)
             # print('parent is %s, filename is %s' % (parent, filename))
             # print('the full name of the file is %s' % os.path.join(parent, filename))
             image_size = os.path.getsize(os.path.join(parent, filename))
@@ -100,6 +102,30 @@ def distinct():
     file_repeat = []
     for currIndex, filename in enumerate(file_list):
         image1 = file_list[currIndex]
+        if ~image1.endswith('.jpg'):
+            future = os.path.join(save_path, os.path.basename(image1))
+            face_id = 1
+            if os.path.exists(future):
+                old_name = os.path.basename(image1)
+                name_list = old_name.split('.')
+                prefix = name_list[0]
+                suffix = name_list[1]
+                temp = prefix + '(%s).' + suffix
+                rename = temp % face_id
+                print(rename)
+                future = os.path.join(save_path, rename)
+                while os.path.exists(future):
+                    face_id += 1
+                    temp = prefix + '(%s).' + suffix
+                    rename = temp % face_id
+                    future = os.path.join(save_path, rename)
+                print(future)
+                result = os.path.join(os.path.dirname(image1), os.path.basename(future))
+                print(result)
+                os.rename(image1, result)
+                image1 = result
+            shutil.move(image1, save_path)
+            continue
         dir_image2 = file_list[currIndex + 1]
         result = is_same(image1, dir_image2)
         if result == "two images is different":
@@ -118,4 +144,9 @@ def distinct():
 
 
 if __name__ == '__main__':
-    print(is_same('E:\\total\\2.jpg', 'E:\\total\\3.jpg'))
+    # load_path = 'E:\\1'  # 要去重的文件夹
+    load_path = 'E:\\remove'  # 要去重的文件夹
+    # save_path = 'E:\\2'  # 空文件夹，用于存储检测到的重复的照片
+    save_path = 'E:\\total'  # 空文件夹，用于存储检测到的重复的照片
+    distinct()
+    # print(is_same('E:\\total\\2.jpg', 'E:\\total\\3.jpg'))

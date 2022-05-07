@@ -209,33 +209,37 @@ def get_all_data(target, key):
         time.sleep(1)
 
 
+url = 'https://search.51job.com/list/{},000000,0000,00,9,99,{},2,1.html?lang=c&postchannel=0000&workyear=99&cotype=99&degreefrom=99&jobterm=99&companysize=99&ord_field=0&dibiaoid=0&line=&welfare='
+
+
 def multithreaded():
     # login()
     beijing = 'https://search.51job.com/list/010000,000000,0000,00,9,99,java,2,1.html?lang=c&postchannel=0000&workyear=99&cotype=99&degreefrom=99&jobterm=99&companysize=99&ord_field=0&dibiaoid=0&line=&welfare='
     shanghai = 'https://search.51job.com/list/020000,000000,0000,00,9,99,java,2,1.html?lang=c&postchannel=0000&workyear=99&cotype=99&degreefrom=99&jobterm=99&companysize=99&ord_field=0&dibiaoid=0&line=&welfare='
     guangzhou = 'https://search.51job.com/list/030200,000000,0000,00,9,99,java,2,1.html?lang=c&postchannel=0000&workyear=99&cotype=99&degreefrom=99&jobterm=99&companysize=99&ord_field=0&dibiaoid=0&line=&welfare='
     shenzhen = 'https://search.51job.com/list/040000,000000,0000,00,9,99,java,2,1.html?lang=c&postchannel=0000&workyear=99&cotype=99&degreefrom=99&jobterm=99&companysize=99&ord_field=0&dibiaoid=0&line=&welfare='
+
     print('thread %s is running...' % threading.current_thread().name)
 
-    thread_list = []
-    t1 = threading.Thread(target=get_all_data, args=(beijing,))
-    t2 = threading.Thread(target=get_all_data, args=(shanghai,))
-    t3 = threading.Thread(target=get_all_data, args=(guangzhou,))
-    t4 = threading.Thread(target=get_all_data, args=(shenzhen,))
-    thread_list.append(t1)
-    thread_list.append(t2)
-    thread_list.append(t3)
-    thread_list.append(t4)
-
-    for t in thread_list:
-        t.setDaemon(True)  # 设置为守护线程
-        t.start()
-        t.join()  # 在这个子线程完成运行之前，主线程将一直被阻塞
-    print('thread %s ended.' % threading.current_thread().name)
+    # thread_list = []
+    # t1 = threading.Thread(target=get_all_data, args=(beijing,))
+    # t2 = threading.Thread(target=get_all_data, args=(shanghai,))
+    # t3 = threading.Thread(target=get_all_data, args=(guangzhou,))
+    # t4 = threading.Thread(target=get_all_data, args=(shenzhen,))
+    # thread_list.append(t1)
+    # thread_list.append(t2)
+    # thread_list.append(t3)
+    # thread_list.append(t4)
+    #
+    # for t in thread_list:
+    #     t.setDaemon(True)  # 设置为守护线程
+    #     t.start()
+    #     t.join()  # 在这个子线程完成运行之前，主线程将一直被阻塞
+    # print('thread %s ended.' % threading.current_thread().name)
 
 
 if __name__ == '__main__':
+    all = '000000'
     search_key = 'java'
-    url = 'https://search.51job.com/list/010000%252c030200%252c040000%252c020000,000000,0000,00,9,99,{},2,1.html?lang=c&postchannel=0000&workyear=99&cotype=99&degreefrom=99&jobterm=99&companysize=99&ord_field=0&dibiaoid=0&line=&welfare='.format(
-        search_key)
+    url = url.format(all, search_key)
     get_all_data(url, search_key)
