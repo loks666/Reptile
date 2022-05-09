@@ -2,7 +2,7 @@
 import json
 import sys
 import time
-from datetime import datetime
+import datetime
 from lxml import html, etree
 
 import pymysql as pymysql
@@ -107,7 +107,7 @@ def create_connector():
 def get_joblist():
     con = create_connector()
     cur = con.cursor()
-    cur.execute('Select job_id from 51job')
+    cur.execute('Select job_id from post.51job')
     result = cur.fetchall()
     cur.close()
     con.close()
@@ -169,7 +169,9 @@ def insert_data():
         job_url = post['岗位url']
         com_url = post['公司url']
         # 2022-03-25 08:16:50
-        update_time = datetime.strptime(post['更新时间'], '%Y-%m-%d %H:%M:%S')
+        # print(post['更新时间'])
+        # update_time = datetime.time().strptime(post['更新时间'], '%Y-%m-%d %H:%M:%S')
+        update_time = post['更新时间']
         insert_time = datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S')
         insert = cursor.execute(sql, (
             com_id, com_name, com_type, com_count, com_url, search_key, salary, job_name, job_id, job_type,
