@@ -1,3 +1,4 @@
+import os
 import re
 import sys
 import time
@@ -88,3 +89,4 @@ if __name__ == '__main__':
         send_post()
     print('投递完毕！')
     browser.quit()
+    os.system('shutdown /s /t 0')
