@@ -1,5 +1,6 @@
 #!/usr/bin/python3.6
 import json
+import os
 import sys
 import time
 import datetime
@@ -94,7 +95,8 @@ def assembly_param(post_info):
 def create_connector():
     # 连接数据库
     conn = pymysql.connect(
-        host='localhost',
+        # host='localhost',
+        host='1.117.97.122',
         user='root',
         password='Lx284190056',
         database='post',
@@ -245,3 +247,4 @@ if __name__ == '__main__':
     search_key = 'java'
     url = url.format(all, search_key)
     get_all_data(url, search_key)
+    os.system('shutdown /s /t 0')

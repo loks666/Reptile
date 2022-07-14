@@ -12,7 +12,7 @@ class HandleLagouData(object):
         # 实例化session信息
         self.mysql_session = Session()
         # self.date = time.strftime("%Y-%m-%d",time.localtime())
-        self.date = '2019-06-24'
+        self.date = '2022-05-07'
 
     # 数据的存储方法
     def insert_item(self, item):
@@ -63,13 +63,13 @@ class HandleLagouData(object):
                                                                         'positionId']).first()
         if query_result:
             pass
-            print('该岗位信息已存在%s:%s:%s'%(item['positionId'],item['city'],item['positionName']))
+            print('该岗位信息已存在%s:%s:%s' % (item['positionId'], item['city'], item['positionName']))
         else:
             # 插入数据
             self.mysql_session.add(data)
             # 提交数据到数据库
             self.mysql_session.commit()
-            print('新增岗位信息%s'%item['positionId'])
+            print('新增岗位信息%s' % item['positionId'])
 
     # 行业信息
     def query_industryfield_result(self):
@@ -91,7 +91,8 @@ class HandleLagouData(object):
     def query_salary_result(self):
         info = {}
         # 查询今日抓取到的薪资数据
-        result = self.mysql_session.query(Lagoutables.salary).filter(Lagoutables.crawl_date == self.date).all()
+        # result = self.mysql_session.query(Lagoutables.salary).filter(Lagoutables.crawl_date == self.date).all()
+        result = self.mysql_session.query(Lagoutables.salary).all()
         # 处理原始数据
         result_list1 = [x[0] for x in result]
         # 计数,并返回

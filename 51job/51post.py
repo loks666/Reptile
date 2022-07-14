@@ -1,6 +1,4 @@
-import os
 import re
-import sys
 import time
 from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.common.by import By
@@ -89,4 +87,4 @@ if __name__ == '__main__':
         send_post()
     print('投递完毕！')
     browser.quit()
-    os.system('shutdown /s /t 0')
+    # os.system('shutdown /s /t 0')

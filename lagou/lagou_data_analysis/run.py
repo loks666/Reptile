@@ -32,6 +32,7 @@ def get_echart_data():
     info['echart_33'] = lagou_mysql.query_jobNature_result()
     # 各地区发布岗位数
     info['map'] = lagou_mysql.query_city_result()
+    print(info)
     return jsonify(info)
 
 
@@ -44,4 +45,4 @@ def lagou():
 
 if __name__ == '__main__':
     # 启动flask
-    app.run(debug=True, host="0.0.0.0", port=80)
+    app.run(debug=True, host="0.0.0.0", port=8066)
