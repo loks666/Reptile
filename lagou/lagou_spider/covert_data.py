@@ -9,7 +9,7 @@ from lagou.lagou_spider.handle_insert_data import lagou_mysql
 def create_connector():
     # 连接数据库
     conn = pymysql.connect(
-        host='localhost',
+        host='1.117.97.122',
         user='root',
         password='Lx284190056',
         database='post',
@@ -48,12 +48,11 @@ def covert():
 #     # 关闭数据库连接
 #     con.close()
 
-
-if __name__ == '__main__':
+def covert_data():
     job_list = covert()
     lagou_list = []
     con = create_connector()
-    cursor = con.cursor()
+    cursor = con.cursor(pymysql.cursors.DictCursor)
     # insert_time = datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S')
     for job in job_list:
         print(job)
@@ -91,3 +90,30 @@ if __name__ == '__main__':
     cursor.close()
     sys.exit()
     # print(covert())
+
+
+def amend_field():
+    con = create_connector()
+    cursor = con.cursor(pymysql.cursors.DictCursor)
+    cursor.execute('Select * from lagou.lagou_data;')
+    data = cursor.fetchall()
+    # insert_time = datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S')
+    for job in data:
+        split = job['companyLabelList'].split(',')
+        if len(split) == 0:
+            continue
+        else:
+            if "-" in str(split[0]):
+                sub = split[0].split('-')
+                result = sub[0]
+            else:
+                result = split[0]
+        sql = "UPDATE lagou.lagou_data set base = %s where id = %s"
+        insert = cursor.execute(sql, (result, job['id']))
+        print(insert)
+    con.commit()  # 增加，修改，删除数据必须提交
+    cursor.close()
+
+
+if __name__ == '__main__':
+    amend_field()

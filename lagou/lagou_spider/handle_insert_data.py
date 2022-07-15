@@ -107,7 +107,8 @@ class HandleLagouData(object):
     def query_workyear_result(self):
         info = {}
         # 查询今日抓取到的薪资数据
-        result = self.mysql_session.query(Lagoutables.workYear).filter(Lagoutables.crawl_date == self.date).all()
+        # result = self.mysql_session.query(Lagoutables.workYear).filter(Lagoutables.crawl_date == self.date).all()
+        result = self.mysql_session.query(Lagoutables.workYear).all()
         # 处理原始数据
         result_list1 = [x[0] for x in result]
         # 计数,并返回
@@ -122,7 +123,8 @@ class HandleLagouData(object):
     def query_education_result(self):
         info = {}
         # 查询今日抓取到的薪资数据
-        result = self.mysql_session.query(Lagoutables.education).filter(Lagoutables.crawl_date == self.date).all()
+        # result = self.mysql_session.query(Lagoutables.education).filter(Lagoutables.crawl_date == self.date).all()
+        result = self.mysql_session.query(Lagoutables.education).all()
         # 处理原始数据
         result_list1 = [x[0] for x in result]
         # 计数,并返回
@@ -136,8 +138,8 @@ class HandleLagouData(object):
     # 岗位发布数量,折线图
     def query_job_result(self):
         info = {}
-        result = self.mysql_session.query(Lagoutables.crawl_date, func.count('*').label('c')).group_by(
-            Lagoutables.crawl_date).all()
+        # result = self.mysql_session.query(Lagoutables.crawl_date, ).group_by(Lagoutables.crawl_date).all()
+        result = self.mysql_session.query(Lagoutables.base,func.count('*').label('c')).group_by(Lagoutables.base).all()
         result1 = [{"name": x[0], "value": x[1]} for x in result]
         name_list = [name['name'] for name in result1]
         info['x_name'] = name_list
@@ -148,8 +150,7 @@ class HandleLagouData(object):
     def query_city_result(self):
         info = {}
         # 查询今日抓取到的薪资数据
-        result = self.mysql_session.query(Lagoutables.city, func.count('*').label('c')).filter(
-            Lagoutables.crawl_date == self.date).group_by(Lagoutables.city).all()
+        result = self.mysql_session.query(Lagoutables.city,func.count('*').label('c')).group_by(Lagoutables.city).all()
         result1 = [{"name": x[0], "value": x[1]} for x in result]
         name_list = [name['name'] for name in result1]
         info['x_name'] = name_list
@@ -175,7 +176,7 @@ class HandleLagouData(object):
     def query_companysize_result(self):
         info = {}
         # 查询今日抓取到的薪资数据
-        result = self.mysql_session.query(Lagoutables.companySize).filter(Lagoutables.crawl_date == self.date).all()
+        result = self.mysql_session.query(Lagoutables.companySize).all()
         # 处理原始数据
         result_list1 = [x[0] for x in result]
         # 计数,并返回
@@ -190,7 +191,7 @@ class HandleLagouData(object):
     def query_jobNature_result(self):
         info = {}
         # 查询今日抓取到的薪资数据
-        result = self.mysql_session.query(Lagoutables.jobNature).filter(Lagoutables.crawl_date == self.date).all()
+        result = self.mysql_session.query(Lagoutables.jobNature).all()
         # 处理原始数据
         result_list1 = [x[0] for x in result]
         # 计数,并返回
