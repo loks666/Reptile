@@ -9,7 +9,8 @@ from lagou.lagou_spider.handle_insert_data import lagou_mysql
 def create_connector():
     # 连接数据库
     conn = pymysql.connect(
-        host='1.117.97.122',
+        # host='1.117.97.122',
+        host='localhost',
         user='root',
         password='Lx284190056',
         database='post',
@@ -115,5 +116,25 @@ def amend_field():
     cursor.close()
 
 
+def update_time():
+    con = create_connector()
+    cursor = con.cursor(pymysql.cursors.DictCursor)
+    cursor.execute('Select * from post.`51job`;')
+    data = cursor.fetchall()
+    # insert_time = datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S')
+    for job in data:
+        if job['update_time'] is None:
+            continue
+        sql = "UPDATE lagou.lagou_data set crawl_date = %s where id = %s"
+        # time = job['update_time'].split(' ')
+        time = job['update_time'].strftime('%Y-%m-%d')
+        print(time)
+        insert = cursor.execute(sql, (time, job['job_id']))
+        # print(insert)
+    con.commit()  # 增加，修改，删除数据必须提交
+    cursor.close()
+
+
 if __name__ == '__main__':
-    amend_field()
+    update_time()
+    sys.exit()

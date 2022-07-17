@@ -31,8 +31,34 @@ def get_data(sql):
 
 
 if __name__ == '__main__':
-    sql = 'Select com_name,com_type,com_count,salary,job_name,job_benefits,job_req,area from 51job'
-    rel, columns = get_data(sql)
-    data1 = list(map(list, rel))
-    df = pd.DataFrame(data=data1, columns=columns)  # mysql查询的结果为元组，需要转换为列表
-    df.to_csv('51job.csv', index=None)
+    # sql = 'Select com_name,com_type,com_count,salary,job_name,job_benefits,job_req,area from 51job'
+    # rel, columns = get_data(sql)
+    # data1 = list(map(list, rel))
+    # df = pd.DataFrame(data=data1, columns=columns)  # mysql查询的结果为元组，需要转换为列表
+    # df.to_csv('51job.csv', index=None)
+    s = "语文, 数学, 英文, 化学"
+    list = s.split(",")
+    # list = ['语文', '数学', '英文', '化学']
+
+    # 方法1
+    # 遍历列表方法1：'
+    for i in list:
+        print("序号：%s 值：%s" % (list.index(i) + 1, i))
+
+    # 遍历列表方法2：'
+    # 方法2
+    print()
+    for i in range(len(list)):
+        print("序号：%s 值：%s" % (i + 1, list[i]))
+
+    # 方法3
+    # 遍历列表方法3：'
+    print()
+    for i, val in enumerate(list):
+        print("序号：%s 值：%s" % (i + 1, val))
+
+    # 方法3
+    # 遍历列表方法3 （设置遍历开始初始位置，只改变了起始序号）：'
+    print()
+    for i, val in enumerate(list, 2):
+        print("序号：%s 值：%s" % (i + 1, val))

@@ -491,7 +491,7 @@
                         return b.value - a.value;
                     }).slice(0, 5)),
                     symbolSize: function (val) {
-                        return val[2] / 10;
+                        return val[2] / 38;
                     },
                     // 气泡特效
                     showEffectOn: 'render',
@@ -511,7 +511,7 @@
                     itemStyle: {
                         normal: {
                             // 气泡颜色
-                            color: '#ffeb7b'
+                            color: '#ff3366'
                         }
                     }
                 }
@@ -829,7 +829,7 @@
             legend: {
                 top: '0%',
                 // data: ['python', 'java'],
-                data: ['python'],
+                data: ['java'],
                 textStyle: {
                     color: 'rgba(255,255,255,.5)',
                     fontSize: '12'
@@ -887,7 +887,7 @@
             }],
             series: [
                 {
-                    name: 'python',
+                    name: 'java',
                     type: 'line',
                     // 是否平滑显示
                     smooth: true,

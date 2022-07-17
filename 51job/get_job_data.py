@@ -21,7 +21,10 @@ options = ChromeOptions()
 options.headless = True
 options.add_experimental_option('excludeSwitches', ['enable-automation'])
 options.add_experimental_option('useAutomationExtension', False)
-browser = webdriver.Chrome(service=s, options=options)
+# browser = webdriver.Chrome(service=s, options=options)
+browser = webdriver.Chrome(service=s)
+browser.set_window_position(3841, 0)
+# 启动开发者模式(关闭chrome控制)
 browser.execute_cdp_cmd("Page.addScriptToEvaluateOnNewDocument", {
     "source": """
     Object.defineProperty(navigator, 'webdriver', {
@@ -37,8 +40,11 @@ wait = WebDriverWait(browser, 10)
 
 def login():
     browser.get(url)
+    time.sleep(1)
     input_keys('//*[@id="loginname"]', 'zhanghuming')
+    time.sleep(1)
     input_keys('//*[@id="password"]', 'mima')
+    time.sleep(1)
     click('//*[@class="check"]')
     time.sleep(1)
     click('//*[@id="login_btn_withPwd"]')
@@ -95,8 +101,8 @@ def assembly_param(post_info):
 def create_connector():
     # 连接数据库
     conn = pymysql.connect(
-        # host='localhost',
-        host='1.117.97.122',
+        host='localhost',
+        # host='1.117.97.122',
         user='root',
         password='Lx284190056',
         database='post',
@@ -159,15 +165,24 @@ def insert_data():
         job_type = post['岗位类型']
         job_benefits = post['公司福利']
         job_req = post['岗位要求']
-        split = job_req.split(',')
-        city = split[0]
-        if '-' in city:
-            split = city.split('-')
-            base = split[0]
-            area = split[1]
-        else:
-            base = city
-            area = city
+        reqs = job_req.split(',')
+        workYear = '无经验要求'
+        education = '无学历要求'
+        for i in range(len(reqs)):
+            condition = i + 1
+            item = reqs[i]
+            if condition == 1:
+                if '-' in item:
+                    split = item.split('-')
+                    base = split[0]
+                    area = split[1]
+                else:
+                    base = item
+                    area = item
+            if condition == 2:
+                workYear = item
+            if condition == 3:
+                education = item
         job_url = post['岗位url']
         com_url = post['公司url']
         # 2022-03-25 08:16:50
@@ -181,6 +196,15 @@ def insert_data():
             job_url, base, area, update_time, insert_time))
         # print(insert)
         joblist.append(job_id)
+
+        lagou = "INSERT INTO `lagou`.`lagou_data`(`id`, `positionID`, `longitude`, `latitude`, `positionName`, `workYear`, `education`, `jobNature`, `financeStage`, `companySize`, `industryField`, `city`, `positionAdvantage`, `companyShortName`, `companyFullName`, `district`, `companyLabelList`, `salary`,`crawl_date`,`insert_date`) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)"
+        crawl_date = datetime.datetime.now().strftime('%Y-%m-%d')
+        insert_time = insert_time
+        lagou_result = cursor.execute(lagou, (
+            job_id, com_id, 0, 0, job_name, workYear, education, '全职', '未知', com_count,
+            com_type, base,
+            job_benefits, com_name, com_name, area, job_req, salary,
+            crawl_date, insert_time))
     con.commit()  # 增加，修改，删除数据必须提交
     cursor.close()
     # 关闭数据库连接
@@ -208,9 +232,9 @@ def get_all_data(target, key):
             browser.quit()
             sys.exit()
         click('//a[@class="e_icons i_next"]')
-        time.sleep(1)
+        time.sleep(3)
         browser.refresh()
-        time.sleep(1)
+        time.sleep(3)
 
 
 url = 'https://search.51job.com/list/{},000000,0000,00,9,99,{},2,1.html?lang=c&postchannel=0000&workyear=99&cotype=99&degreefrom=99&jobterm=99&companysize=99&ord_field=0&dibiaoid=0&line=&welfare='
@@ -247,4 +271,4 @@ if __name__ == '__main__':
     search_key = 'java'
     url = url.format(all, search_key)
     get_all_data(url, search_key)
-    os.system('shutdown /s /t 0')
+    # os.system('shutdown /s /t 0')

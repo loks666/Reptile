@@ -5,13 +5,28 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support import expected_conditions as EC
 from selenium import webdriver
 from selenium.webdriver.support.wait import WebDriverWait
+from selenium.webdriver import ChromeOptions
 
 s = Service(executable_path=r'chromedriver.exe')
-browser = webdriver.Chrome(service=s)
+options = ChromeOptions()
+options.headless = True
+options.add_experimental_option('excludeSwitches', ['enable-automation'])
+options.add_experimental_option('useAutomationExtension', False)
+browser = webdriver.Chrome(service=s, options=options)
+browser.set_window_position(3841, 0)
+browser.execute_cdp_cmd("Page.addScriptToEvaluateOnNewDocument", {
+    "source": """
+    Object.defineProperty(navigator, 'webdriver', {
+      get: () => undefined
+    })
+  """
+})
+# options.add_argument("--proxy-server=http://127.0.0.1:8888")
 browser.set_window_position(3841, 0)
 browser.maximize_window()
 url = 'https://login.51job.com/login.php?loginway=0&isjump=0&lang=c&from_domain=i&url='
 wait = WebDriverWait(browser, 10)
+browser.implicitly_wait(10)
 
 
 def login():

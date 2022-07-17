@@ -4,8 +4,8 @@ from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy import Column
 
 # 创建数据库的连接
-# engine = create_engine("mysql+pymysql://root:Lx284190056@127.0.0.1:3306/lagou?charset=utf8")
-engine = create_engine("mysql+pymysql://root:Lx284190056@1.117.97.122:3306/lagou?charset=utf8")
+engine = create_engine("mysql+pymysql://root:Lx284190056@127.0.0.1:3306/lagou?charset=utf8")
+# engine = create_engine("mysql+pymysql://root:Lx284190056@1.117.97.122:3306/lagou?charset=utf8")
 # 操作数据库，需要我们创建一个session
 Session = sessionmaker(bind=engine)
 
@@ -54,8 +54,6 @@ class Lagoutables(Base):
     salary = Column(String(length=20), nullable=False, comment='工资')
     # 抓取日期
     crawl_date = Column(String(length=20), nullable=False, comment='抓取日期')
-
-    base = Column(String(length=20), nullable=False, comment='所在地')
 
 
 if __name__ == '__main__':
