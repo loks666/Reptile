@@ -1,19 +1,39 @@
 # -*- coding: utf-8 -*-
 # author:Gary
+import html
+import json
+from xml import etree
+
 import requests  # 获取网页内容
 from bs4 import BeautifulSoup  # 解析网页内容
 import re  # 正则匹配内容
 
 
 # 获取网页的内容
-def get_html(urls):
-    header = {
-        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) '
-                      'Chrome/79.0.3945.130 Safari/537.36'}
-    res = requests.get(urls, headers=header)  # 获取网页，并带有伪装的浏览器头，一般好的网站会有检测是不是程序访问
-    res.encoding = res.apparent_encoding  # 设置编码，防止乱码
-    # print(res.text)#输出网页内容
-    return res.text  # 返回网页的内容
+def get_html(urls, proxy):
+    print(proxy)
+    try:
+        header = {
+            'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) '
+                          'Chrome/79.0.3945.130 Safari/537.36'}
+        proxyHost = proxy['ip']
+        proxyPort = proxy['port']
+        proxyMeta = "http://%(host)s:%(port)s" % {
+            "host": proxyHost,
+            "port": proxyPort,
+        }
+        proxies = {
+            "http": proxyMeta,
+            "https": proxyMeta
+        }
+        res = requests.get(urls, headers=header, proxies=proxies)
+        print(res.status_code)
+        if res.status_code == 403:
+            get_html(urls, get_proxy())
+        res.encoding = 'utf-8'
+        return res.text  # 返回网页的内容
+    except RuntimeError:
+        return None
 
 
 # 通过bs4解析，主要是标签选择器
@@ -39,25 +59,36 @@ def ana_by_bs4(html):
         area = infos[1].strip()  # 国家，地区
         m_type = infos[2].strip()  # 类型
         rating = li.find('span', class_='rating_num').text  # 评分
-        remark_num=li.find('div',class_='star').find_all('span')[3].text[:-3]#评分人数
+        remark_num = li.find('div', class_='star').find_all('span')[3].text[:-3]  # 评分人数
         try:
             quote = li.find('span', class_='inq').text  # 名言
-        except:  # 名言可能不存在
+        except NameError:  # 名言可能不存在
             quote = ''
         # print(actor)
-        print(index, the_title, sub_title, other_title, actor, year, area, m_type, rating,remark_num, quote)
+        print(index, the_title, sub_title, other_title, actor, year, area, m_type, rating, remark_num, quote)
+
+
+def get_proxy():
+    url = 'http://tiqu.pyhttp.taolop.com/getip?count=1&neek=15925&type=2&yys=0&port=2&sb=&mr=2&sep=0&ts=1&ys=1&cs=1'
+    response = requests.get(url)
+    if response.status_code == 200:
+        str = json.loads(response.text)
+        ip_list = str['data']
+        print(response.text)
+        return ip_list[0]
+    else:
+        print('failed')
 
 
 if __name__ == '__main__':
-    for page in range(10):
-        print('第{}页'.format(page + 1))
-        print('正标题', '副标题', '其他标题', '导演和主演', '年份', '地区', '类型', '评分', '评分人数','名言')
-        # url = 'https://movie.douban.com/top250?start={}&filter='.format(page * 25)  # 电影的url，有多页的时候需要观察url的规律
-        url = 'https://www.douban.com/group/search?cat=1019&q={}'.format('上海')
-        url = 'https://www.douban.com/group/search?cat={}&q={}}'.format('上海')
+    url = 'https://www.douban.com/group/search?cat=1019&q={}'.format('上海')
+    htmldoc = get_html(urls=url, proxy=get_proxy())
 
-        text = get_html(url)  # 获取网页内容
-        print(text)
-        soup = BeautifulSoup("<html>A Html Text</html>", "html.parser")
-        # ana_by_bs4(text)  # bs4方式解析
+    soup = BeautifulSoup(htmldoc, "html.parser")
+    result = soup.find_all(attrs={'class': 'result'})
+    for item in result:
+        print(item.text)
 
+    # print(result.text)
+    # selector = html.etree.HTML(htmldoc)
+    # print(selector.xpath('//div[@class="result"]'))
