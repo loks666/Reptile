@@ -9,7 +9,7 @@ cryptography==36.0.1
 h11==0.13.0
 idna==3.3
 joblib==1.1.0
-lxml==4.8.0
+lxml==4.9.1
 numpy==1.22.3
 outcome==1.1.0
 pdfminer.six==20211012
