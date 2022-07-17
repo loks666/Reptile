@@ -2,19 +2,15 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>全国主要城市空气质量-百度地图</title>
-    <!--引入echarts.js这个文件-->
+    <title>百度地图散点图</title>
     <script src="../js/echarts.js"></script>
     <script src="../js/bmap.js"></script>
-    <script src="http://api.map.baidu.com/api?v=2.0&ak=lNwaciqv8rLkXhVTRKbQVmDv8EKazhQ7"></script>
-
+    <script src="http://api.map.baidu.com/api?v=2.0&ak=6vYTZqhtMaLVdhoKIaKlLI6MclE40cT7"></script>
 </head>
 <body>
-<!--定义画布-->
-<div id="main" style="height: 1300px;width: 3000px"></div>
+<div id="main" style="height: 500px"></div>
 <script type="text/javascript">
-    // 进行echarts的初始化，以及定位到画布
-    var mychart = echarts.init(document.getElementById("main"))
+    var mychart = echarts.init(document.getElementById("main"));
     var data = [
         {name: '海门', value: 9},
         {name: '鄂尔多斯', value: 12},
@@ -412,63 +408,58 @@
         }
         return res;
     };
-    // 配置项和配置数据
-    var option = {
-        // 标题
-        title: {
-            text: '全国主要城市空气质量-百度地图',
-            subtext: 'data from PM2.5.in',
-            left: 'center'
+    option={
+        title:{
+            text:'全国主要城市空气质量-百度地图',
+            subtext:'data from PM25.in',
+            left:'center'
         },
-        // 图例
-        tooltip: {},
-        bmap: {
-            center: [104.114129, 37.550339],
-            zoom: 5,
-            roam: false
+        tooltip:{},
+        bmap:{
+            center:[104.114129, 37.550339],
+            zoom:5,
+            // roam:false
+            roam:true
         },
-        // 数据
-        series: [
+        series:[
             {
-                name: 'PM2.5',
-                // 地图类型
-                type: 'scatter',
-                coordinateSystem: 'bmap',
-                data: convertData(data),
+                name:'PM2.5',
+                type:'scatter',
+                coordinateSystem:'bmap',
+                data:convertData(data),
                 symbolSize:function (val) {
                     return val[2]/10;
                 },
                 itemStyle:{
-                     normal:{
-                         color:'purple'
-                     }
+                    normal:{
+                        color:'purple'
+                    }
                 }
             },
             {
-                name: 'top5',
-                // 地图类型
-                type: 'effectScatter',
-                coordinateSystem: 'bmap',
-                data: convertData(data.sort(function (a, b) {
-                    return b.value - a.value;
+                name:'top5',
+                type:'effectScatter',
+                coordinateSystem:'bmap',
+                data:convertData(data.sort(function (a,b) {
+                    return b.value-a.value;
                 }).slice(0,5)),
                 symbolSize:function (val) {
                     return val[2]/10;
                 },
-                showEffectOh:'render',
+                showEffectOn:'render',
                 rippleEffect:{
                     brushType:'stroke'
                 },
                 itemStyle:{
-                     normal:{
-                         color:'purple'
-                     }
+                    normal:{
+                        color:'purple'
+                    }
                 }
             }
-
         ]
     };
-    mychart.setOption(option)
+    mychart.setOption(option);
 </script>
+
 </body>
 </html>

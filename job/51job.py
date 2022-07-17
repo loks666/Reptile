@@ -29,12 +29,14 @@ def weibo_login():
     click('.//*[@node-type="submit"]', xpath)
     # time.sleep(3)
 
+
 def job_login():
     url = 'https://www.51job.com/'
     driver.get(url)
     input_keys('#loginname', '你的账号')
     input_keys('#password', '你的密码')
     click('#login_btn')
+
 
 def search():
     try:

@@ -22,7 +22,6 @@
 </script>
 <script type="text/javascript" src="../static/js/echarts.min.js"></script>
 <script type="text/javascript" src="../static/js/js.js"></script>
-
 <script type="text/javascript" src="../static/js/china.js"></script>
 <body>
 <div class="canvas" style="opacity: .2">
@@ -32,8 +31,8 @@
     <div class="loadbox"><img src="../static/picture/loading.gif"> 页面加载中...</div>
 </div>
 <div class="head">
-    <h1>{{result.position}}岗位数据可视化分析</h1>
-    <div class="weather"><span id="showTime"></span></div>
+    <h1>Java岗位数据可视化分析</h1>
+    <div class="weather"><img src="../static/picture/weather.png"><span>多云转小雨</span><span id="showTime"></span></div>
 
     <script>
         var t = null;
@@ -82,14 +81,14 @@
             <div class="bar">
                 <div class="barbox">
                     <ul class="clearfix">
-                        <li class="pull_left counter">{{result.all_count}}</li>
-<!--                        <li class="pulll_left counter">{{result.today_count}}</li>-->
+                        <li class="pulll_left counter">{{result.all_count}}</li>
+                        <li class="pulll_left counter">{{result.today_count}}</li>
                     </ul>
                 </div>
                 <div class="barbox2">
                     <ul class="clearfix">
-                        <li class="pull_left">总数据量</li>
-<!--                        <li class="pulll_left">今日抓取量</li>-->
+                        <li class="pulll_left">总数据量</li>
+                        <li class="pulll_left">今日抓取量</li>
                     </ul>
                 </div>
             </div>
