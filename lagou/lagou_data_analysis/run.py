@@ -45,4 +45,4 @@ def lagou():
 
 if __name__ == '__main__':
     # 启动flask
-    app.run(debug=True, host="0.0.0.0", port=8066)
+    app.run(debug=True, host="0.0.0.0", port=5002)
