@@ -6,10 +6,6 @@ from lagou.lagou_spider.handle_insert_data import lagou_mysql
 # 实例化flask
 app = Flask(__name__)
 
-
-
-
-
 redis_info = {
     "host": "1.117.97.122",
     "password": "12345qwe",
@@ -23,14 +19,30 @@ r = redis.Redis(**redis_info, decode_responses=True)
 # 注册路由
 @app.route("/")
 def index():
-    r.set("redistest", '小爱同学')
-    print(r.get("redistest"))
-    return "helloworld:" + r.get("redistest")
+    return "Hello World! Python!"
 
 
-
-@app.route("/get_echart_data")
+@app.route("/get_echart_data/", methods=['GET'])
 def get_echart_data():
+    data = r.get("analysis")
+    if is_json(data):
+        return json.loads(data)
+    f = open("data.json", "r", encoding='utf-8')
+    return json.loads(f.read())
+
+
+def is_json(json_data):
+    if json_data is None:
+        return False
+    try:
+        json.loads(json_data)
+    except ValueError:
+        return False
+    return True
+
+
+@app.route("/get_data/")
+def get_data():
     info = {}
     # 行业发布数量分析
     info['echart_1'] = lagou_mysql.query_industryfield_result()
@@ -50,9 +62,9 @@ def get_echart_data():
     info['echart_33'] = lagou_mysql.query_jobNature_result()
     # 各地区发布岗位数
     info['map'] = lagou_mysql.query_city_result()
-    print(info)
-    # with open("test.json", 'w', encoding='utf-8') as f:
+    # with open("data.json", 'w', encoding='utf-8') as f:
     #     json.dump(info, f, ensure_ascii=False)
+    # r.set("analysis", json.dumps(info, ensure_ascii=False))
     return jsonify(info)
 
 
