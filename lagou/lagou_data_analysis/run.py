@@ -23,7 +23,7 @@ def index():
     return "Hello World! Python!"
 
 
-@app.route("/get_echart_data/", methods=['GET'])
+@app.route("/get_echart_data/")
 def get_echart_data():
     data = r.get("analysis")
     if is_json(data):
@@ -71,7 +71,12 @@ def get_data():
 @app.route("/lagou/", methods=['GET', 'POST'])
 def lagou():
     # 库内数据总量，今日抓取量
-    result = lagou_mysql.count_result()
+    data = r.get("count")
+    if is_json(data):
+        result = json.loads(data)
+    else:
+        result = lagou_mysql.count_result()
+        r.set("count", json.dumps(result, ensure_ascii=False))
     return render_template('./index.html', result=result)
 
 
