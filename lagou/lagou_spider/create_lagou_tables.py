@@ -5,7 +5,7 @@ from sqlalchemy import Column
 
 # 创建数据库的连接
 # engine = create_engine("mysql+pymysql://root:Lx284190056@127.0.0.1:3306/lagou?charset=utf8")
-engine = create_engine("mysql+pymysql://root:Lx284190056@172.0.17.1:3306/lagou?charset=utf8")
+engine = create_engine("mysql+pymysql://root:Lx284190056@1.117.97.122:3306/lagou?charset=utf8")
 # 操作数据库，需要我们创建一个session
 Session = sessionmaker(bind=engine)
 
