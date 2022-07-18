@@ -9,4 +9,4 @@ EXPOSE 5002
 
 ENV PYTHONPATH="/app:$PYTHONPATH"
 
-CMD ["python", "run.py"]
+CMD ["python", "./lagou_data_analysis/run.py"]
