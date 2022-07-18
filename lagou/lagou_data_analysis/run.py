@@ -1,3 +1,5 @@
+import json
+import redis
 from flask import Flask, render_template, jsonify
 from lagou.lagou_spider.handle_insert_data import lagou_mysql
 
@@ -5,10 +7,26 @@ from lagou.lagou_spider.handle_insert_data import lagou_mysql
 app = Flask(__name__)
 
 
+
+
+
+redis_info = {
+    "host": "1.117.97.122",
+    "password": "12345qwe",
+    "port": 6379,
+    "db": 0
+}
+
+r = redis.Redis(**redis_info, decode_responses=True)
+
+
 # 注册路由
 @app.route("/")
 def index():
-    return "helloworld"
+    r.set("redistest", '小爱同学')
+    print(r.get("redistest"))
+    return "helloworld:" + r.get("redistest")
+
 
 
 @app.route("/get_echart_data")
@@ -33,6 +51,8 @@ def get_echart_data():
     # 各地区发布岗位数
     info['map'] = lagou_mysql.query_city_result()
     print(info)
+    # with open("test.json", 'w', encoding='utf-8') as f:
+    #     json.dump(info, f, ensure_ascii=False)
     return jsonify(info)
 
 
