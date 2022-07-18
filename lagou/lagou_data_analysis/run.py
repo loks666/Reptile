@@ -14,6 +14,7 @@ redis_info = {
 }
 
 r = redis.Redis(**redis_info, decode_responses=True)
+tmp_data = json.load(open("data.json", "r", encoding='utf-8'))
 
 
 # 注册路由
@@ -27,8 +28,7 @@ def get_echart_data():
     data = r.get("analysis")
     if is_json(data):
         return json.loads(data)
-    f = open("data.json", "r", encoding='utf-8')
-    return json.loads(f.read())
+    return tmp_data
 
 
 def is_json(json_data):
