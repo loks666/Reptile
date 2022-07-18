@@ -8,7 +8,7 @@ app = Flask(__name__)
 # 注册路由
 @app.route("/")
 def index():
-    return "Hello World"
+    return "helloworld"
 
 
 @app.route("/get_echart_data")
@@ -40,7 +40,7 @@ def get_echart_data():
 def lagou():
     # 库内数据总量，今日抓取量
     result = lagou_mysql.count_result()
-    return render_template('index.html', result=result)
+    return render_template('./index.html', result=result)
 
 
 if __name__ == '__main__':
