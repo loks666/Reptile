@@ -2,7 +2,12 @@ import json
 import redis
 from flask import Flask, render_template, jsonify
 from lagou.lagou_spider.handle_insert_data import lagou_mysql
+import sys
+import pydevd
 
+sys.path.append('../pycharm-debug.egg')
+
+pydevd.settrace('1.117.97.122', port=5005, stdoutToServer=True, stderrToServer=True)
 # 实例化flask
 app = Flask(__name__)
 
