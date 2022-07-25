@@ -2,10 +2,11 @@ import json
 import redis
 from flask import Flask, render_template, jsonify
 from lagou.lagou_spider.handle_insert_data import lagou_mysql
+from flask_cors import CORS
 
 # 实例化flask
 app = Flask(__name__)
-
+CORS(app, supports_credentials=True)
 redis_info = {
     "host": "1.117.97.122",
     "password": "12345qwe",
