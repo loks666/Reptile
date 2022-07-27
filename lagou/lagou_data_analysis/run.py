@@ -87,5 +87,5 @@ def lagou():
 
 if __name__ == '__main__':
     # 启动flask
-    pydevd_pycharm.settrace('0.0.0.0', port=5004, stdoutToServer=True, stderrToServer=True)
+    pydevd_pycharm.settrace('172.17.0.1', port=5004, stdoutToServer=True, stderrToServer=True)
     app.run(debug=True, host="0.0.0.0", port=5002)
