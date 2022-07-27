@@ -3,6 +3,7 @@ import redis
 from flask import Flask, render_template, jsonify
 from lagou.lagou_spider.handle_insert_data import lagou_mysql
 from flask_cors import CORS
+import pydevd_pycharm
 
 # 实例化flask
 app = Flask(__name__)
@@ -17,6 +18,8 @@ redis_info = {
 r = redis.Redis(**redis_info, decode_responses=True)
 tmp_data = json.load(open("data.json", "r", encoding='utf-8'))
 
+app.debug = True
+
 
 # 注册路由
 @app.route("/")
@@ -24,7 +27,7 @@ def index():
     return "Hello World! Python!"
 
 
-@app.route("/get_echart_data/")
+@app.route("/get_echart_data/", methods=['GET', 'POST'])
 def get_echart_data():
     data = r.get("analysis")
     if is_json(data):
@@ -42,7 +45,7 @@ def is_json(json_data):
     return True
 
 
-@app.route("/get_data/")
+@app.route("/get_data/", methods=['GET', 'POST'])
 def get_data():
     info = {}
     # 行业发布数量分析
@@ -84,4 +87,5 @@ def lagou():
 
 if __name__ == '__main__':
     # 启动flask
+    pydevd_pycharm.settrace('0.0.0.0', port=5004, stdoutToServer=True, stderrToServer=True)
     app.run(debug=True, host="0.0.0.0", port=5002)
