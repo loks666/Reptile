@@ -3,7 +3,7 @@ import redis
 from flask import Flask, render_template, jsonify
 from lagou.lagou_spider.handle_insert_data import lagou_mysql
 from flask_cors import CORS
-import pydevd_pycharm
+# import pydevd_pycharm
 
 # 实例化flask
 app = Flask(__name__)
