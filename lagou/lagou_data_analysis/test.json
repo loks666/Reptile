@@ -1,0 +1,22 @@
+{
+  "_id": "AW5jztHfLFOCNVwb7b7a",
+  "_index": "nb_theme_address_case_dwd-total",
+  "_score": null,
+  "_source": {
+    "ADDR_DETL": "{\"CASE\":{\"BRIEF_CASE\":\"2010年8月23日10时26分,王斌(男,户籍地址:上海市徐汇区梅陇六村6号401室,现住地址:上海市闵行区罗秀路1339弄29号801室,身份证号码:310104198211137219)拨打\"110\"报警称:2010年8月23日10时,其在上海市闵行区梅陇镇行南村11队3号电脑工作室内发现电脑显示器7台、电脑机箱8台被盗。民警到场,通知刑队到场后,告知报警人到所报案。\",\"CASE_TYPE\":null,\"CASE_STATE\":null},\"ORGANIZER_POLICE_TYPE\":null,\"ORGANIZER\":{\"ORGANIZER_NAME\":null,\"ORGANIZER_AREA\":null},\"TIME\":{\"ACCEPTANCE_TIME\":null,\"REGISTER_TIME\":null,\"CLOSING_TIME\":null,\"PUNISH_TIME\":null,\"CASE_TIME\":null,\"REPORT_TIME\":null},\"ACCEPTANCE_UNIT_JSON\":{\"ACCEPTANCE_UNIT_NUMBER\":null,\"ACCEPTANCE_UNIT_NAME\":null},\"TABLE_SOURCE\":\"shga_dwd.base_wsba_hx_a_jbxx_df\",\"CASE_ADDRESS\":\"上海市闵行区梅陇镇行南村11队3号\"}",
+    "ADDR_TYPE": "01",
+    "BLOCK_L4": "梅陇镇",
+    "CASE_NUMBER": "B3101124100002010081664",
+    "CITY_L2": "上海市",
+    "COUNTY_L3": "闵行区",
+    "LOC_SOURCE": "1",
+    "MCS_ID": "0256c65a2aea0df198f3623da0cdad49",
+    "NUMBER_L7": "3号",
+    "PROVINCE_L1": "上海市",
+    "STD_ADDRESS": "上海市上海市闵行区梅陇镇3号"
+  },
+  "_type": "a",
+  "sort": [
+    26091
+  ]
+}

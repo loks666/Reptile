@@ -108,7 +108,16 @@ def get_size(size, dot=2):
     return human_size
 
 
+def delDir():
+    import shutil
+    path = ''
+    if os.path.exists(path):
+        shutil.rmtree(path)
+    else:
+        os.makedirs(path)
+
+
 if __name__ == '__main__':
     save_path = 'E:\\remove'
     remove_file(source)
-    os.system('shutdown /s /t 0')
+    # os.system('shutdown /s /t 0')
