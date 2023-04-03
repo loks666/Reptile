@@ -57,8 +57,8 @@ class LiePin:
 
     def gen_urls(self, key):
         # 检索搜索关键字的页面数，并生成url
-        # base_url = "https://www.liepin.com/zhaopin/?init=-1&fromSearchBtn=2&degradeFlag=0&key=%s&d_sfrom=search_unknown&d_pageSize=40"
-        base_url = "https://c.liepin.com/?time=1680542042166"
+        base_url = "https://www.liepin.com/zhaopin/?init=-1&fromSearchBtn=2&degradeFlag=0&key=%s&d_sfrom=search_unknown&d_pageSize=40"
+        # base_url = "https://c.liepin.com/?time=1680542042166"
         test_url = base_url % key
         test_html = self.get_html(test_url)
         if test_html is not None:
