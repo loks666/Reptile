@@ -7,6 +7,7 @@ source = "E:\\total"
 target = "E:\\group"
 
 path = "E:\\LR预设"
+path = "E:\\remove"
 dirs = []
 
 
@@ -80,10 +81,10 @@ def is_chinese(check_str):
 def modify(file_path):
     files = [os.path.abspath(os.path.join(r, f)) for r, _, fs in os.walk(file_path) for f in fs]
     for f in files:
-        f_name = os.path.basename(f)  # 获取文件名
-        print(f_name)
-        print(f)
-
+        # f_name = os.path.basename(f)  # 获取文件名
+        # print(f_name)
+        # print(f)
+        del_small_file(f)
         # os.rename(n1, n2)
     # for i in os.walk(file_path):
     #     print(i[0])  # 返回文件夹的名字，先返回第一层文件夹，然后返回文件夹内的文件夹
@@ -91,8 +92,19 @@ def modify(file_path):
     #     print(j)  # 输出文件的名字
 
 
+def del_small_file(file_name):
+    size = os.path.getsize(file_name)
+    file_size = 1000 * 1024  # 更改成你想删除的界限，我这里是1000kb
+    if size < file_size:
+        os.remove(file_name)
+        print('remove', size, file_name)
+        os.system('shutdown /s /t 0')
+
+
 if __name__ == '__main__':
-    modify(path)
+    
+    # modify(path)
+    # print(os.path.getsize('E:\\remove\94704.jpg'))
     # dirs = group_file(source) #分类文件
     # dirs = {'jpg', 'mov', 'mp4'}
     # for i in dirs:
