@@ -3,6 +3,7 @@ import redis
 from flask import Flask, render_template, jsonify
 from lagou.lagou_spider.handle_insert_data import lagou_mysql
 from flask_cors import CORS
+
 # import pydevd_pycharm
 
 # 实例化flask
@@ -83,6 +84,11 @@ def lagou():
         result = lagou_mysql.count_result()
         r.set("count", json.dumps(result, ensure_ascii=False))
     return render_template('./index.html', result=result)
+
+
+@app.route("/yang/", methods=['GET', 'POST'])
+def yang():
+    return render_template('./yang.html')
 
 
 if __name__ == '__main__':

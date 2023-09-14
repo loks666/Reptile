@@ -6,7 +6,6 @@ import math
 # 源路径
 source = "E:\\group\\jpg"
 
-
 # 分类
 def remove_file(path):
     # 遍历当前路径下所有文件
