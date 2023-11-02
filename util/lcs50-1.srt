@@ -1,0 +1,3155 @@
+2278
+01:40:02,750 --> 01:40:03,900
+Nothing's happening yet.
+
+2279
+01:40:03,900 --> 01:40:06,300
+But notice, the program
+is still running.
+
+2280
+01:40:06,300 --> 01:40:10,700
+And so if I move my cursor, move
+my cursor, move my cursor, and--
+
+2281
+01:40:10,700 --> 01:40:12,880
+[MEOWING]
+
+2282
+01:40:12,880 --> 01:40:14,550
+OK, so maybe we could add some Waiting.
+
+2283
+01:40:14,550 --> 01:40:17,750
+But the cat does not want
+to be pet, in this case.
+
+2284
+01:40:17,750 --> 01:40:20,220
+But it's indeed conditional.
+
+2285
+01:40:20,220 --> 01:40:22,380
+So there we have an
+incarnation in Scratch
+
+2286
+01:40:22,380 --> 01:40:24,290
+of doing something conditionally.
+
+2287
+01:40:24,290 --> 01:40:26,790
+Now, we can make this really
+cool, really fast, if you will.
+
+2288
+01:40:26,790 --> 01:40:28,440
+Let me stop this version.
+
+2289
+01:40:28,440 --> 01:40:31,270
+Let me go ahead and do this.
+
+2290
+01:40:31,270 --> 01:40:33,270
+Let me go ahead and
+throw all of this away.
+
+2291
+01:40:33,270 --> 01:40:36,210
+Let me go into my little
+Extensions bucket over here.
+
+2292
+01:40:36,210 --> 01:40:40,020
+And let me do Video Sensing, since
+most laptops or phones these days have
+
+2293
+01:40:40,020 --> 01:40:40,620
+cameras.
+
+2294
+01:40:40,620 --> 01:40:44,190
+And there, indeed, I am,
+with Sanders behind me.
+
+2295
+01:40:44,190 --> 01:40:45,780
+And let me do this.
+
+2296
+01:40:45,780 --> 01:40:48,900
+When Video Motion-- and
+let me get out of the way.
+
+2297
+01:40:48,900 --> 01:40:51,820
+When Video Motion is
+Greater Than some value.
+
+2298
+01:40:51,820 --> 01:40:55,920
+So 10 is the default. This is just a
+number that measures how much motion
+
+2299
+01:40:55,920 --> 01:40:56,670
+there is or isn't.
+
+2300
+01:40:56,670 --> 01:40:58,290
+So small number is like no motion.
+
+2301
+01:40:58,290 --> 01:40:59,920
+Big number is lots of motion.
+
+2302
+01:40:59,920 --> 01:41:03,120
+So I'm going to choose 50,
+somewhat arbitrarily here-- so 50.
+
+2303
+01:41:03,120 --> 01:41:05,370
+This is not normal to
+program off to the side.
+
+2304
+01:41:05,370 --> 01:41:08,130
+But I'm now going to say this.
+
+2305
+01:41:08,130 --> 01:41:14,460
+When Video Motion is 50, go ahead
+and Play Sound Meow like this.
+
+2306
+01:41:14,460 --> 01:41:16,170
+So the cat is still in that world.
+
+2307
+01:41:16,170 --> 01:41:18,970
+I'm going to stop the
+program and rerun it.
+
+2308
+01:41:18,970 --> 01:41:21,090
+So here we go, Green Flag.
+
+2309
+01:41:21,090 --> 01:41:24,780
+And now here comes-- all
+right, this is a little creepy,
+
+2310
+01:41:24,780 --> 01:41:27,120
+the way I'm petting the cat, but--
+
+2311
+01:41:27,120 --> 01:41:30,640
+and-- [SIGH]
+
+2312
+01:41:30,640 --> 01:41:31,600
+
+
+2313
+01:41:31,600 --> 01:41:32,940
+[MEOWING]
+
+2314
+01:41:32,940 --> 01:41:33,440
+OK.
+
+2315
+01:41:33,440 --> 01:41:35,750
+[LAUGHTER]
+
+2316
+01:41:35,750 --> 01:41:36,290
+There we go.
+
+2317
+01:41:36,290 --> 01:41:37,910
+OK, so 50 was too big of a number.
+
+2318
+01:41:37,910 --> 01:41:39,500
+I have to pet the cat faster.
+
+2319
+01:41:39,500 --> 01:41:41,925
+[MEOWING]
+
+2320
+01:41:41,925 --> 01:41:42,900
+
+
+2321
+01:41:42,900 --> 01:41:44,940
+Whereas this, if--
+
+2322
+01:41:44,940 --> 01:41:46,410
+I don't know--
+
+2323
+01:41:46,410 --> 01:41:48,330
+[LAUGHTER]
+
+2324
+01:41:48,330 --> 01:41:49,924
+Yeah, so--
+
+2325
+01:41:49,924 --> 01:41:50,710
+[MEOW]
+
+2326
+01:41:50,710 --> 01:41:53,618
+OK, so you can make things even
+more interactive in this way
+
+2327
+01:41:53,618 --> 01:41:55,410
+by just assembling
+different puzzle pieces.
+
+2328
+01:41:55,410 --> 01:41:58,050
+And honestly, there are so many
+different puzzle pieces in here.
+
+2329
+01:41:58,050 --> 01:42:00,610
+We're not going to even scratch
+the surface of a lot of them.
+
+2330
+01:42:00,610 --> 01:42:02,940
+But they generally
+just do what they say.
+
+2331
+01:42:02,940 --> 01:42:06,480
+And indeed, when you see on
+the screen here this pallet
+
+2332
+01:42:06,480 --> 01:42:09,330
+of puzzle pieces, really a lot of
+programming, especially early on,
+
+2333
+01:42:09,330 --> 01:42:12,970
+when learning a language, is just trying
+different things and try and fail.
+
+2334
+01:42:12,970 --> 01:42:17,070
+And if it doesn't work quite right,
+look for an alternative solution
+
+2335
+01:42:17,070 --> 01:42:20,000
+there too, as even I just
+had to do a moment ago.
+
+2336
+01:42:20,000 --> 01:42:23,250
+Well, let's go ahead and use, actually,
+how about another example of something
+
+2337
+01:42:23,250 --> 01:42:24,720
+a predecessor of yours made?
+
+2338
+01:42:24,720 --> 01:42:28,830
+Let me go ahead and grab a program
+I opened in advance here called
+
+2339
+01:42:28,830 --> 01:42:32,520
+Whack-A-Mole Might we get a
+brave volunteer to come up,
+
+2340
+01:42:32,520 --> 01:42:38,895
+who is willing to whack a mole
+with their head, virtually?
+
+2341
+01:42:38,895 --> 01:42:40,770
+Maybe-- OK, let's see,
+how about in way back?
+
+2342
+01:42:40,770 --> 01:42:42,300
+You want to come on down?
+
+2343
+01:42:42,300 --> 01:42:45,327
+All right, come on down.
+
+2344
+01:42:45,327 --> 01:42:47,160
+Sure, a round of applause
+for our volunteer.
+
+2345
+01:42:47,160 --> 01:42:49,382
+[APPLAUSE]
+
+2346
+01:42:49,382 --> 01:42:52,130
+
+
+2347
+01:42:52,130 --> 01:42:56,835
+All right, so here we have--
+
+2348
+01:42:56,835 --> 01:42:59,930
+
+
+2349
+01:42:59,930 --> 01:43:01,178
+come on down.
+
+2350
+01:43:01,178 --> 01:43:01,970
+AUDIENCE: Hi there.
+
+2351
+01:43:01,970 --> 01:43:02,720
+DAVID J. MALAN: What's your name?
+
+2352
+01:43:02,720 --> 01:43:03,320
+AUDIENCE: I'm Josh.
+
+2353
+01:43:03,320 --> 01:43:05,695
+DAVID J. MALAN: Oh, actually,
+say it into the microphone.
+
+2354
+01:43:05,695 --> 01:43:06,950
+AUDIENCE: Hi, I'm Josh.
+
+2355
+01:43:06,950 --> 01:43:07,670
+DAVID J. MALAN: OK, nice.
+
+2356
+01:43:07,670 --> 01:43:08,240
+Welcome, Josh.
+
+2357
+01:43:08,240 --> 01:43:08,782
+Come on over.
+
+2358
+01:43:08,782 --> 01:43:10,850
+[APPLAUSE]
+
+2359
+01:43:10,850 --> 01:43:12,892
+All right, so same idea here--
+
+2360
+01:43:12,892 --> 01:43:13,850
+I'll take the mic back.
+
+2361
+01:43:13,850 --> 01:43:15,230
+You'll have to stand
+in front of the camera.
+
+2362
+01:43:15,230 --> 01:43:18,105
+In just a moment, you're going to
+have to position your head in a box
+
+2363
+01:43:18,105 --> 01:43:20,150
+that your classmate
+from yesteryear created.
+
+2364
+01:43:20,150 --> 01:43:22,340
+[MUSIC PLAYING]
+
+2365
+01:43:22,340 --> 01:43:22,840
+
+
+2366
+01:43:22,840 --> 01:43:24,490
+And we'll start with Beginner.
+
+2367
+01:43:24,490 --> 01:43:25,180
+AUDIENCE: OK.
+
+2368
+01:43:25,180 --> 01:43:28,166
+DAVID J. MALAN: So line your
+head up in the box in a moment.
+
+2369
+01:43:28,166 --> 01:43:29,142
+AUDIENCE: All right.
+
+2370
+01:43:29,142 --> 01:43:37,438
+
+
+2371
+01:43:37,438 --> 01:43:39,878
+[LAUGHTER]
+
+2372
+01:43:39,878 --> 01:43:43,800
+
+
+2373
+01:43:43,800 --> 01:43:45,390
+DAVID J. MALAN: Nice.
+
+2374
+01:43:45,390 --> 01:43:46,155
+12 seconds.
+
+2375
+01:43:46,155 --> 01:43:52,500
+
+
+2376
+01:43:52,500 --> 01:43:53,790
+5 seconds.
+
+2377
+01:43:53,790 --> 01:43:55,710
+Notice the score's up to 18 already.
+
+2378
+01:43:55,710 --> 01:43:58,410
+Pretty good.
+
+2379
+01:43:58,410 --> 01:44:00,990
+All right, a round of applause
+for Josh, if we could.
+
+2380
+01:44:00,990 --> 01:44:03,440
+[APPLAUSE]
+
+2381
+01:44:03,440 --> 01:44:06,380
+
+
+2382
+01:44:06,380 --> 01:44:09,020
+So notice how using some
+fairly simple primitives,
+
+2383
+01:44:09,020 --> 01:44:11,330
+things do get interesting pretty fast.
+
+2384
+01:44:11,330 --> 01:44:12,560
+And how was that implemented?
+
+2385
+01:44:12,560 --> 01:44:14,560
+Well, there were probably
+at least four sprites.
+
+2386
+01:44:14,560 --> 01:44:16,222
+So you're not confined to just one cat.
+
+2387
+01:44:16,222 --> 01:44:18,930
+You can create more and more
+sprites, change what they look like.
+
+2388
+01:44:18,930 --> 01:44:20,930
+So they actually look
+like a mole, in this case.
+
+2389
+01:44:20,930 --> 01:44:23,990
+There's probably some conditionals
+in there, some loops for 30 seconds.
+
+2390
+01:44:23,990 --> 01:44:27,200
+That's checking if Josh's
+head's movement is exceeding
+
+2391
+01:44:27,200 --> 01:44:29,210
+some value over this
+way or over this way,
+
+2392
+01:44:29,210 --> 01:44:31,550
+then increment something
+called a variable.
+
+2393
+01:44:31,550 --> 01:44:32,450
+We'll see those too.
+
+2394
+01:44:32,450 --> 01:44:34,490
+Just like in algebra
+you might have x and y
+
+2395
+01:44:34,490 --> 01:44:37,700
+and z, storing values like
+numbers, so can computer programs,
+
+2396
+01:44:37,700 --> 01:44:42,350
+have variables called x or y or z,
+or more descriptively called Score,
+
+2397
+01:44:42,350 --> 01:44:44,810
+as in this case at top
+right, or another variable
+
+2398
+01:44:44,810 --> 01:44:47,780
+called Countdown, typically one
+word in code, but in this case
+
+2399
+01:44:47,780 --> 01:44:49,632
+two words, that just store some value.
+
+2400
+01:44:49,632 --> 01:44:51,590
+So there's probably some
+math going on in there
+
+2401
+01:44:51,590 --> 01:44:55,040
+whereby the author of this program
+just is incrementing, that is,
+
+2402
+01:44:55,040 --> 01:44:59,060
+adding 1 and 1 every time it detected
+that a mole had been whacked,
+
+2403
+01:44:59,060 --> 01:45:00,570
+in this case, with movement.
+
+2404
+01:45:00,570 --> 01:45:04,910
+So back in the day, I, myself, actually
+implemented my very first program
+
+2405
+01:45:04,910 --> 01:45:08,180
+in Scratch when I was a graduate
+student, actually, at MIT--
+
+2406
+01:45:08,180 --> 01:45:11,290
+cross-registered at MIT, taking
+a class from MIT's Media Lab,
+
+2407
+01:45:11,290 --> 01:45:14,540
+specifically, the lifelong kindergarten
+group, which is the group that created
+
+2408
+01:45:14,540 --> 01:45:15,500
+Scratch, itself.
+
+2409
+01:45:15,500 --> 01:45:19,580
+And the program I wrote all
+those years ago and still
+
+2410
+01:45:19,580 --> 01:45:22,040
+rather cling to is a
+little something here
+
+2411
+01:45:22,040 --> 01:45:26,620
+called Oscartime, that I thought I'd
+play just a quick excerpt of myself
+
+2412
+01:45:26,620 --> 01:45:27,120
+here.
+
+2413
+01:45:27,120 --> 01:45:30,530
+So in this case, consider,
+as the music starts playing,
+
+2414
+01:45:30,530 --> 01:45:33,800
+how this program, which is much
+more sophisticated, certainly,
+
+2415
+01:45:33,800 --> 01:45:38,060
+than the earliest "Say hello" examples
+we just did might also be implemented.
+
+2416
+01:45:38,060 --> 01:45:40,745
+Let me go ahead now and
+click the Green Flag.
+
+2417
+01:45:40,745 --> 01:45:44,950
+[MUSIC - OSCAR THE GROUCH, "I LOVE
+ TRASH"]
+
+2418
+01:45:44,950 --> 01:45:46,973
+OSCAR THE GROUCH:
+(SINGING) Oh, I love trash.
+
+2419
+01:45:46,973 --> 01:45:50,140
+DAVID J. MALAN: OK, so some trash is
+moving, presumably in some kind of loop
+
+2420
+01:45:50,140 --> 01:45:51,970
+from the top.
+
+2421
+01:45:51,970 --> 01:45:56,440
+If I'm touching the mouse
+cursor, it follows me.
+
+2422
+01:45:56,440 --> 01:45:59,920
+If I hover over the
+trash can, it responds.
+
+2423
+01:45:59,920 --> 01:46:04,600
+If I let go, in some kind
+of loop, Oscar pops out,
+
+2424
+01:46:04,600 --> 01:46:06,910
+creates a variable
+with the current score.
+
+2425
+01:46:06,910 --> 01:46:07,900
+And it happens again.
+
+2426
+01:46:07,900 --> 01:46:09,983
+OSCAR THE GROUCH: (SINGING)
+It's awful, the holes.
+
+2427
+01:46:09,983 --> 01:46:11,950
+And the laces are torn.
+
+2428
+01:46:11,950 --> 01:46:16,030
+A gift from my mother
+the day I was born.
+
+2429
+01:46:16,030 --> 01:46:20,050
+I love it because it's trash.
+
+2430
+01:46:20,050 --> 01:46:21,070
+Oh, I--
+
+2431
+01:46:21,070 --> 01:46:24,050
+DAVID J. MALAN: It's
+pretty easy at first but--
+
+2432
+01:46:24,050 --> 01:46:26,410
+OSCAR THE GROUCH: (SINGING)
+--anything dirty or dingy--
+
+2433
+01:46:26,410 --> 01:46:28,980
+DAVID J. MALAN: So I don't
+need to keep playing this up
+
+2434
+01:46:28,980 --> 01:46:30,230
+on stage in front of everyone.
+
+2435
+01:46:30,230 --> 01:46:32,950
+So my score is already
+now up to some 6 or so.
+
+2436
+01:46:32,950 --> 01:46:35,900
+But in a moment, too, you'll
+see that it's going to escalate.
+
+2437
+01:46:35,900 --> 01:46:38,080
+So I'm taking into account
+some time apparently.
+
+2438
+01:46:38,080 --> 01:46:38,980
+So now--
+
+2439
+01:46:38,980 --> 01:46:42,343
+OSCAR THE GROUCH: (SINGING) I have
+here some newspaper, 13 months old.
+
+2440
+01:46:42,343 --> 01:46:45,010
+DAVID J. MALAN: So more and more
+sprites are suddenly appearing.
+
+2441
+01:46:45,010 --> 01:46:46,540
+And notice, that each
+time they're appearing
+
+2442
+01:46:46,540 --> 01:46:48,040
+from a different part of the screen.
+
+2443
+01:46:48,040 --> 01:46:49,840
+That's an illusion, perhaps, too, that--
+
+2444
+01:46:49,840 --> 01:46:52,270
+pick a random number between x and y.
+
+2445
+01:46:52,270 --> 01:46:54,490
+So you can actually pick
+some range of values
+
+2446
+01:46:54,490 --> 01:46:56,032
+to have the game constantly changing.
+
+2447
+01:46:56,032 --> 01:46:58,073
+And indeed, I'm going to
+go ahead and click Stop,
+
+2448
+01:46:58,073 --> 01:47:00,860
+since I spent like eight hours
+plus, years ago, making this.
+
+2449
+01:47:00,860 --> 01:47:02,602
+And I can never listen
+to the song again,
+
+2450
+01:47:02,602 --> 01:47:04,810
+not that I should be anyway
+at this point in my life.
+
+2451
+01:47:04,810 --> 01:47:09,670
+But this song is synchronized then with
+a lot of the actions that's happening.
+
+2452
+01:47:09,670 --> 01:47:12,130
+And ultimately, there's just
+a lot of building blocks.
+
+2453
+01:47:12,130 --> 01:47:15,610
+But I didn't sit down and implement
+Oscartime, as I called it, all at once.
+
+2454
+01:47:15,610 --> 01:47:17,500
+I really did take baby
+steps, so to speak.
+
+2455
+01:47:17,500 --> 01:47:21,970
+And I figured out, well, how could I
+decompose this vision I had at the time
+
+2456
+01:47:21,970 --> 01:47:24,220
+to create this game ultimately?
+
+2457
+01:47:24,220 --> 01:47:26,470
+And how do I bite off maybe
+the easiest parts first?
+
+2458
+01:47:26,470 --> 01:47:29,912
+And honestly, the first thing I did was
+I found this image, and I just dragged
+
+2459
+01:47:29,912 --> 01:47:31,120
+and dropped it into Scratch--
+
+2460
+01:47:31,120 --> 01:47:33,580
+OK, done-- like, lamppost is installed.
+
+2461
+01:47:33,580 --> 01:47:34,575
+It doesn't do anything.
+
+2462
+01:47:34,575 --> 01:47:35,450
+It's not interactive.
+
+2463
+01:47:35,450 --> 01:47:37,995
+But I at least set the stage,
+so to speak, for the program.
+
+2464
+01:47:37,995 --> 01:47:39,370
+Then what else might I have done?
+
+2465
+01:47:39,370 --> 01:47:40,640
+Well, let me do this.
+
+2466
+01:47:40,640 --> 01:47:44,290
+Let me go ahead and open
+up in another editor here
+
+2467
+01:47:44,290 --> 01:47:48,980
+an early incarnation of
+Oscartime by doing this.
+
+2468
+01:47:48,980 --> 01:47:51,220
+Let me go into Oscartime here.
+
+2469
+01:47:51,220 --> 01:47:52,510
+Let me full screen this.
+
+2470
+01:47:52,510 --> 01:47:54,190
+And here you have--
+
+2471
+01:47:54,190 --> 01:47:56,080
+let me hide the trash
+for just a moment--
+
+2472
+01:47:56,080 --> 01:48:00,010
+is what I might call the second
+version of my program, wherein,
+
+2473
+01:48:00,010 --> 01:48:03,220
+at the top right of the stage here,
+I had the lamppost, which I just
+
+2474
+01:48:03,220 --> 01:48:06,267
+dragged and dropped and got going,
+but then I added an actual sprite.
+
+2475
+01:48:06,267 --> 01:48:09,100
+And it has to be a sprite if you
+want it to do things interactively.
+
+2476
+01:48:09,100 --> 01:48:10,420
+The lamppost-- not a sprite.
+
+2477
+01:48:10,420 --> 01:48:13,240
+It's just an image a costume,
+if you will, for the whole
+
+2478
+01:48:13,240 --> 01:48:14,680
+stage itself, a backdrop.
+
+2479
+01:48:14,680 --> 01:48:16,780
+But this thing is indeed
+a sprite because it
+
+2480
+01:48:16,780 --> 01:48:20,240
+needs to respond to code and
+events, like dragging and dropping.
+
+2481
+01:48:20,240 --> 01:48:23,960
+So what might I have done
+early on with that code?
+
+2482
+01:48:23,960 --> 01:48:26,350
+Well, maybe the first
+version would have been
+
+2483
+01:48:26,350 --> 01:48:30,250
+something like this, whereby my
+very first version of Oscartime
+
+2484
+01:48:30,250 --> 01:48:32,170
+might have said
+something like, oh, this.
+
+2485
+01:48:32,170 --> 01:48:35,500
+How about, let me control the program
+as before-- or, rather, events.
+
+2486
+01:48:35,500 --> 01:48:38,630
+When the Green Flag is
+clicked, what do I want to do?
+
+2487
+01:48:38,630 --> 01:48:43,600
+Well, I want to go ahead and
+forever do something like this.
+
+2488
+01:48:43,600 --> 01:48:46,687
+Forever-- so I want the lid
+to open up if I touch it.
+
+2489
+01:48:46,687 --> 01:48:49,270
+So if the cursor gets near the
+lid, I want the lid to open up.
+
+2490
+01:48:49,270 --> 01:48:51,340
+And then if I move away,
+I want it to close.
+
+2491
+01:48:51,340 --> 01:48:52,640
+So how can I do that?
+
+2492
+01:48:52,640 --> 01:48:56,080
+I want an If, but I just don't want
+one question, I really want two,
+
+2493
+01:48:56,080 --> 01:48:59,200
+a fork in the road that goes
+left or right, so to speak.
+
+2494
+01:48:59,200 --> 01:49:02,830
+And let me grab this puzzle
+piece here, as I did long ago.
+
+2495
+01:49:02,830 --> 01:49:04,690
+So notice, it grows to fill.
+
+2496
+01:49:04,690 --> 01:49:06,430
+What's the question I want to ask?
+
+2497
+01:49:06,430 --> 01:49:08,680
+Well, under Sensing, I'm
+going to go ahead here
+
+2498
+01:49:08,680 --> 01:49:12,670
+and say If this trashcan is
+Touching the Mouse Pointer--
+
+2499
+01:49:12,670 --> 01:49:13,863
+what do I want to do?
+
+2500
+01:49:13,863 --> 01:49:16,030
+Well, I want to change what
+the trashcan looks like.
+
+2501
+01:49:16,030 --> 01:49:17,740
+And this part, I did
+in advance of class.
+
+2502
+01:49:17,740 --> 01:49:21,040
+If you go up here to Costumes, this is
+where all the graphical stuff happens.
+
+2503
+01:49:21,040 --> 01:49:25,720
+And you'll see that I imported a
+whole bunch of different costumes
+
+2504
+01:49:25,720 --> 01:49:29,080
+that effectively, much like a
+video, when you play them quickly,
+
+2505
+01:49:29,080 --> 01:49:31,423
+creates the illusion of
+movement, some animation.
+
+2506
+01:49:31,423 --> 01:49:33,340
+But it's really just
+dot, dot, dot, dot, dot--
+
+2507
+01:49:33,340 --> 01:49:35,320
+different images showing on the screen.
+
+2508
+01:49:35,320 --> 01:49:39,250
+Well, some of these costumes
+are called like Oscar1, Oscar2.
+
+2509
+01:49:39,250 --> 01:49:40,810
+Oscar1 is closed.
+
+2510
+01:49:40,810 --> 01:49:42,070
+Oscar2 is open.
+
+2511
+01:49:42,070 --> 01:49:43,730
+So let's just deal with those first.
+
+2512
+01:49:43,730 --> 01:49:48,100
+So if I'm touching the mouse pointer,
+let me go under-- how about Looks?
+
+2513
+01:49:48,100 --> 01:49:50,680
+And we didn't use this before,
+but there's this block,
+
+2514
+01:49:50,680 --> 01:49:52,870
+Switch Costume to Something Else.
+
+2515
+01:49:52,870 --> 01:49:55,150
+I'm going to drag and drop
+this inside of the If.
+
+2516
+01:49:55,150 --> 01:49:57,070
+And notice it's a little bit indented.
+
+2517
+01:49:57,070 --> 01:50:00,730
+I'm going to change it
+not to Oscar8, but Oscar2.
+
+2518
+01:50:00,730 --> 01:50:03,340
+Otherwise, If Not Touching
+the Mouse Pointer--
+
+2519
+01:50:03,340 --> 01:50:05,890
+this is the other direction
+in the fork in the road--
+
+2520
+01:50:05,890 --> 01:50:10,840
+let's go ahead and switch the costume
+back to what I described as Oscar1.
+
+2521
+01:50:10,840 --> 01:50:12,400
+So let me run this program.
+
+2522
+01:50:12,400 --> 01:50:14,900
+And not much of interest
+is happening yet.
+
+2523
+01:50:14,900 --> 01:50:18,550
+But notice, if I move
+the cursor up, down--
+
+2524
+01:50:18,550 --> 01:50:20,030
+but how is that working?
+
+2525
+01:50:20,030 --> 01:50:22,940
+It's just changing the costume
+that's being overlaid on the sprite.
+
+2526
+01:50:22,940 --> 01:50:24,790
+So it looks like interactivity,
+but you are really
+
+2527
+01:50:24,790 --> 01:50:25,998
+just changing the aesthetics.
+
+2528
+01:50:25,998 --> 01:50:29,135
+And we humans are just kind of
+assuming, oh, it's opening up.
+
+2529
+01:50:29,135 --> 01:50:30,760
+Well, no, it's just changing a costume.
+
+2530
+01:50:30,760 --> 01:50:31,802
+So here's the difference.
+
+2531
+01:50:31,802 --> 01:50:34,210
+The high-level abstraction--
+trashcan opening.
+
+2532
+01:50:34,210 --> 01:50:36,850
+The lower-level implementation
+detail-- costume
+
+2533
+01:50:36,850 --> 01:50:38,500
+changing, creating that illusion.
+
+2534
+01:50:38,500 --> 01:50:41,680
+And if I want it to look prettier, I
+could just have many other costumes
+
+2535
+01:50:41,680 --> 01:50:45,220
+and go boom, boom, boom, boom, boom
+to create more frames per second,
+
+2536
+01:50:45,220 --> 01:50:46,130
+if you will.
+
+2537
+01:50:46,130 --> 01:50:48,820
+So I need to do one other thing.
+
+2538
+01:50:48,820 --> 01:50:51,130
+Maybe if I accidentally
+leave the trashcan open,
+
+2539
+01:50:51,130 --> 01:50:52,750
+let me make one change here.
+
+2540
+01:50:52,750 --> 01:50:54,730
+Let me make sure that
+the very first thing
+
+2541
+01:50:54,730 --> 01:50:58,360
+I do when the Green Flag is clicked,
+is always start with the trashcan
+
+2542
+01:50:58,360 --> 01:51:01,810
+closed because otherwise, you
+might accidentally leave it open.
+
+2543
+01:51:01,810 --> 01:51:03,590
+So this gets me into some default state.
+
+2544
+01:51:03,590 --> 01:51:08,133
+So now it's always closed until
+I manually hover over it instead.
+
+2545
+01:51:08,133 --> 01:51:09,550
+Well, what might I have done next?
+
+2546
+01:51:09,550 --> 01:51:13,587
+Well, if I wanted to introduce something
+like the trash, I need a second sprite.
+
+2547
+01:51:13,587 --> 01:51:15,670
+And here, in advance, I
+grabbed the image already.
+
+2548
+01:51:15,670 --> 01:51:18,310
+Let me pretend that this never happened.
+
+2549
+01:51:18,310 --> 01:51:20,260
+Let me drag this away here.
+
+2550
+01:51:20,260 --> 01:51:24,033
+And now I have nothing in my code
+area for this piece of trash.
+
+2551
+01:51:24,033 --> 01:51:25,200
+But it is the second sprite.
+
+2552
+01:51:25,200 --> 01:51:27,900
+And all I did was I clicked on
+the little cat plus icon here,
+
+2553
+01:51:27,900 --> 01:51:29,190
+created a second sprite.
+
+2554
+01:51:29,190 --> 01:51:30,330
+I named it trash.
+
+2555
+01:51:30,330 --> 01:51:32,250
+I added a costume for it.
+
+2556
+01:51:32,250 --> 01:51:34,170
+Sort of the aesthetic
+stuff, I did in advance.
+
+2557
+01:51:34,170 --> 01:51:36,360
+But here I'll do now the code.
+
+2558
+01:51:36,360 --> 01:51:37,720
+How do I want to do this?
+
+2559
+01:51:37,720 --> 01:51:42,160
+Well, how about when the Green
+Flag is clicked, for the trash can,
+
+2560
+01:51:42,160 --> 01:51:45,090
+I want the trash can in parallel to do--
+
+2561
+01:51:45,090 --> 01:51:48,190
+I want the trash, the piece
+of trash, to do its own thing.
+
+2562
+01:51:48,190 --> 01:51:52,500
+So what I want it to do is maybe
+let's do Motion, how about?
+
+2563
+01:51:52,500 --> 01:51:54,240
+And let's go to a specific coordinate.
+
+2564
+01:51:54,240 --> 01:51:55,750
+Now, there's a lot of options here.
+
+2565
+01:51:55,750 --> 01:52:00,870
+There's Turning, Go to a Random
+Position, Go to x,y, Glide,
+
+2566
+01:52:00,870 --> 01:52:01,740
+more elegantly.
+
+2567
+01:52:01,740 --> 01:52:03,990
+There's a lot of different
+ways to implement movement.
+
+2568
+01:52:03,990 --> 01:52:06,310
+I just want it to go to a
+very specific location first.
+
+2569
+01:52:06,310 --> 01:52:09,000
+So I'm just going to go to x,y first.
+
+2570
+01:52:09,000 --> 01:52:13,350
+And I'm going to say
+x, how about, will be--
+
+2571
+01:52:13,350 --> 01:52:14,470
+let's not hardcode this.
+
+2572
+01:52:14,470 --> 01:52:18,120
+Let's just have it be-- well, let's
+do it at 0, initially, and then 240.
+
+2573
+01:52:18,120 --> 01:52:21,360
+So-- whoops-- let's do 0,240
+so that this piece of trash
+
+2574
+01:52:21,360 --> 01:52:23,410
+always starts at the top
+middle of the screen.
+
+2575
+01:52:23,410 --> 01:52:26,160
+If you think back to that coordinate
+system, 0,0 is in the middle.
+
+2576
+01:52:26,160 --> 01:52:28,230
+240 is straight above it.
+
+2577
+01:52:28,230 --> 01:52:31,150
+All right, now, after I do
+that, what do I want to do?
+
+2578
+01:52:31,150 --> 01:52:34,980
+Well, how about I control
+this thing by forever falling.
+
+2579
+01:52:34,980 --> 01:52:36,427
+Now, how do I make the trash move?
+
+2580
+01:52:36,427 --> 01:52:38,010
+We haven't seen this puzzle piece yet.
+
+2581
+01:52:38,010 --> 01:52:42,390
+But under Motion, the very first thing
+is called Move Some Number of Steps.
+
+2582
+01:52:42,390 --> 01:52:43,380
+By default, it's 10.
+
+2583
+01:52:43,380 --> 01:52:44,880
+But we'll do it more simply.
+
+2584
+01:52:44,880 --> 01:52:47,790
+Let me go ahead and move--
+
+2585
+01:52:47,790 --> 01:52:48,660
+oh, sorry.
+
+2586
+01:52:48,660 --> 01:52:52,350
+Move is going to move it in
+whatever direction it's facing.
+
+2587
+01:52:52,350 --> 01:52:53,753
+I only want it to move down.
+
+2588
+01:52:53,753 --> 01:52:56,670
+So here, even I'm getting confused
+as to how many different ways there
+
+2589
+01:52:56,670 --> 01:52:57,540
+are to do things.
+
+2590
+01:52:57,540 --> 01:52:59,680
+What I thing I want to do is this.
+
+2591
+01:52:59,680 --> 01:53:03,670
+Let me only change my y-axis as follows.
+
+2592
+01:53:03,670 --> 01:53:06,060
+So here's another puzzle
+piece called Change y.
+
+2593
+01:53:06,060 --> 01:53:07,680
+So again, y is the vertical.
+
+2594
+01:53:07,680 --> 01:53:11,400
+So let me just change
+y by one pixel downward
+
+2595
+01:53:11,400 --> 01:53:14,170
+at a time, so -1 one pixel at a time.
+
+2596
+01:53:14,170 --> 01:53:15,540
+So it's kind of slow.
+
+2597
+01:53:15,540 --> 01:53:17,010
+And I think now--
+
+2598
+01:53:17,010 --> 01:53:17,890
+I think that's it.
+
+2599
+01:53:17,890 --> 01:53:18,990
+Let me hit Stop.
+
+2600
+01:53:18,990 --> 01:53:21,700
+Notice that my trashcan is
+still going to be interactive.
+
+2601
+01:53:21,700 --> 01:53:23,370
+I haven't changed or deleted that code.
+
+2602
+01:53:23,370 --> 01:53:26,850
+I've just added now code
+for my piece of trash.
+
+2603
+01:53:26,850 --> 01:53:30,120
+If I click the Green Flag, notice that--
+
+2604
+01:53:30,120 --> 01:53:32,920
+after I enable it-- let
+me start that again.
+
+2605
+01:53:32,920 --> 01:53:34,320
+I had it hidden for before class.
+
+2606
+01:53:34,320 --> 01:53:35,403
+But let me enable it now--
+
+2607
+01:53:35,403 --> 01:53:40,080
+Green Flag, notice it starts dead
+center, at x equals 0, y equals 240,
+
+2608
+01:53:40,080 --> 01:53:42,750
+and it's dropping one pixel at a time.
+
+2609
+01:53:42,750 --> 01:53:46,470
+If that seems a little boring, we
+can change it to -10 pixels at a time
+
+2610
+01:53:46,470 --> 01:53:47,530
+and, boom, it's done.
+
+2611
+01:53:47,530 --> 01:53:49,780
+So that's how you might
+change the speed of a program.
+
+2612
+01:53:49,780 --> 01:53:51,750
+But I'm going to leave
+it more simply as -1.
+
+2613
+01:53:51,750 --> 01:53:54,708
+And honestly, it would be nice if it
+doesn't always start from the top.
+
+2614
+01:53:54,708 --> 01:53:57,083
+Otherwise, this game is not
+going to be very interactive.
+
+2615
+01:53:57,083 --> 01:54:00,580
+I'm literally going to be grabbing the
+trash from the same place every time.
+
+2616
+01:54:00,580 --> 01:54:03,250
+So why don't I, instead, Stop this.
+
+2617
+01:54:03,250 --> 01:54:06,550
+Let me go under Operators, and
+let's pick a random number.
+
+2618
+01:54:06,550 --> 01:54:08,370
+So let me change the hardcoded--
+
+2619
+01:54:08,370 --> 01:54:12,210
+the manually inputted-- 0, and
+let's make x be somewhere between 0,
+
+2620
+01:54:12,210 --> 01:54:15,660
+so in the middle and
+all the way over to--
+
+2621
+01:54:15,660 --> 01:54:18,000
+what was it-- oh, I
+got my numbers wrong--
+
+2622
+01:54:18,000 --> 01:54:20,970
+240 and my y will be 180.
+
+2623
+01:54:20,970 --> 01:54:23,560
+Sorry, I got my x and my y confused.
+
+2624
+01:54:23,560 --> 01:54:25,420
+So let me play this again.
+
+2625
+01:54:25,420 --> 01:54:27,645
+And now we have a game
+that's more like games
+
+2626
+01:54:27,645 --> 01:54:29,520
+you might have played
+growing up or even now,
+
+2627
+01:54:29,520 --> 01:54:30,978
+like there's some randomness to it.
+
+2628
+01:54:30,978 --> 01:54:33,660
+So the CPU, so to speak, is
+doing something more interesting.
+
+2629
+01:54:33,660 --> 01:54:34,570
+Let me run it again.
+
+2630
+01:54:34,570 --> 01:54:35,820
+Now it's a little to the left.
+
+2631
+01:54:35,820 --> 01:54:36,600
+Let me run it again.
+
+2632
+01:54:36,600 --> 01:54:38,058
+Now it's a little more to the left.
+
+2633
+01:54:38,058 --> 01:54:39,630
+Again-- now it's back to the right.
+
+2634
+01:54:39,630 --> 01:54:41,640
+So randomness just makes
+games more interesting.
+
+2635
+01:54:41,640 --> 01:54:44,130
+And this is why when you play any
+video game, if different things are
+
+2636
+01:54:44,130 --> 01:54:46,172
+happening, there's probably
+just some randomness.
+
+2637
+01:54:46,172 --> 01:54:48,360
+And it's quantized as
+just a simple number.
+
+2638
+01:54:48,360 --> 01:54:52,050
+Now, I think I just need one
+final flourish here, if I may.
+
+2639
+01:54:52,050 --> 01:54:54,060
+Let me go ahead and add this.
+
+2640
+01:54:54,060 --> 01:54:57,570
+How about Events-- or rather--
+
+2641
+01:54:57,570 --> 01:54:58,380
+yes, Events.
+
+2642
+01:54:58,380 --> 01:55:02,700
+When Green Flag is clicked, I can do
+multiple things within the same sprite.
+
+2643
+01:55:02,700 --> 01:55:05,190
+They don't all have to be
+attached to the same one.
+
+2644
+01:55:05,190 --> 01:55:10,110
+Let me go ahead and forever go
+ahead and do something else.
+
+2645
+01:55:10,110 --> 01:55:13,470
+How about, Whenever the Trash is--
+
+2646
+01:55:13,470 --> 01:55:17,500
+how about-- Touching the Trash Can--
+
+2647
+01:55:17,500 --> 01:55:20,850
+so Forever If-- let's see,
+I need a Sensing block.
+
+2648
+01:55:20,850 --> 01:55:24,000
+So how about, Is Touching--
+
+2649
+01:55:24,000 --> 01:55:28,530
+not the Mouse Pointer, this time,
+but Touching Oscar himself there.
+
+2650
+01:55:28,530 --> 01:55:30,810
+Now let's see what happens.
+
+2651
+01:55:30,810 --> 01:55:33,750
+All right, so let's go ahead
+and click the Green Flag.
+
+2652
+01:55:33,750 --> 01:55:37,560
+Now I go down over here and let go.
+
+2653
+01:55:37,560 --> 01:55:41,340
+OK, I kind of want it to
+go into the trash can.
+
+2654
+01:55:41,340 --> 01:55:43,620
+How do I make it go into the trash can?
+
+2655
+01:55:43,620 --> 01:55:47,610
+How can we take this high-level
+idea, put trash into the trash can,
+
+2656
+01:55:47,610 --> 01:55:49,950
+and make it seem to disappear?
+
+2657
+01:55:49,950 --> 01:55:51,520
+Logically, what could we do?
+
+2658
+01:55:51,520 --> 01:55:52,370
+Yeah--
+
+2659
+01:55:52,370 --> 01:55:53,245
+AUDIENCE: [INAUDIBLE]
+
+2660
+01:55:53,245 --> 01:55:56,037
+DAVID J. MALAN: OK, so when it
+touches it, let's have it disappear.
+
+2661
+01:55:56,037 --> 01:55:56,910
+So I could hide it.
+
+2662
+01:55:56,910 --> 01:55:59,490
+Or honestly, if the game is
+going to be ongoing, like it was,
+
+2663
+01:55:59,490 --> 01:56:01,980
+letting me drop more and
+more trash, let me just
+
+2664
+01:56:01,980 --> 01:56:04,380
+have it go ahead and pick
+a new random location.
+
+2665
+01:56:04,380 --> 01:56:05,560
+So let me do this.
+
+2666
+01:56:05,560 --> 01:56:09,073
+Let me go ahead and Copy this
+puzzle piece up here and Duplicate.
+
+2667
+01:56:09,073 --> 01:56:10,740
+And I don't want the whole thing, sorry.
+
+2668
+01:56:10,740 --> 01:56:12,400
+Let me get rid of this.
+
+2669
+01:56:12,400 --> 01:56:13,540
+Let me just do this.
+
+2670
+01:56:13,540 --> 01:56:16,720
+Let me go back to some
+random location at the top.
+
+2671
+01:56:16,720 --> 01:56:17,940
+So now notice what happens.
+
+2672
+01:56:17,940 --> 01:56:19,950
+If I click and drag
+on it-- here it goes--
+
+2673
+01:56:19,950 --> 01:56:23,730
+and I let go, it looks like
+it's going into the trash can
+
+2674
+01:56:23,730 --> 01:56:26,318
+because it snaps back up
+to some random location.
+
+2675
+01:56:26,318 --> 01:56:29,610
+Now, the only thing I'm not doing really
+is keeping track of any kind of score.
+
+2676
+01:56:29,610 --> 01:56:33,150
+And it turns out, if I full screen
+this, it's not going to be draggable,
+
+2677
+01:56:33,150 --> 01:56:33,940
+by default.
+
+2678
+01:56:33,940 --> 01:56:35,940
+So just as a corner case,
+so to speak, something
+
+2679
+01:56:35,940 --> 01:56:40,860
+that you might trip over otherwise,
+let me go ahead and under, let's
+
+2680
+01:56:40,860 --> 01:56:45,960
+see, Sensing, it turns out I also
+need this for the piece of trash.
+
+2681
+01:56:45,960 --> 01:56:49,500
+There's this way of setting,
+in Scratch, a sprite
+
+2682
+01:56:49,500 --> 01:56:51,540
+to be draggable or not draggable.
+
+2683
+01:56:51,540 --> 01:56:53,490
+I need to explicitly
+make it draggable so
+
+2684
+01:56:53,490 --> 01:56:55,560
+that when I do full
+screen this thing now,
+
+2685
+01:56:55,560 --> 01:56:58,320
+it still remains draggable
+and someone like myself
+
+2686
+01:56:58,320 --> 01:57:00,240
+can play it again and again.
+
+2687
+01:57:00,240 --> 01:57:03,120
+Well, how about we supplement
+this with one final flourish?
+
+2688
+01:57:03,120 --> 01:57:06,010
+Why don't we keep track
+now of the user score?
+
+2689
+01:57:06,010 --> 01:57:10,560
+So how about, when the user
+actually drags the piece of trash
+
+2690
+01:57:10,560 --> 01:57:13,020
+to the trash can, let me
+go under Variables here,
+
+2691
+01:57:13,020 --> 01:57:16,590
+where, in advance, I've already
+made myself a variable called Score.
+
+2692
+01:57:16,590 --> 01:57:20,100
+I could have called it x or y or z or
+ABC, but that's not very descriptive.
+
+2693
+01:57:20,100 --> 01:57:23,070
+In programming, you typically give
+things a more descriptive English,
+
+2694
+01:57:23,070 --> 01:57:24,450
+or some other language, name.
+
+2695
+01:57:24,450 --> 01:57:26,200
+So I called this one Score.
+
+2696
+01:57:26,200 --> 01:57:28,710
+So how do I want to do this in my Score?
+
+2697
+01:57:28,710 --> 01:57:31,890
+Well, let me go ahead and
+initially set this game
+
+2698
+01:57:31,890 --> 01:57:35,880
+score to 0 at the very top
+of one of these scripts--
+
+2699
+01:57:35,880 --> 01:57:37,470
+one of these programs up here.
+
+2700
+01:57:37,470 --> 01:57:42,570
+And then any time my
+piece of trash is touching
+
+2701
+01:57:42,570 --> 01:57:49,630
+Oscar, let's not just jump to the top,
+let's change the score by 1 up here.
+
+2702
+01:57:49,630 --> 01:57:52,680
+So now notice, If Touching Oscar,
+Change the Score-- that is,
+
+2703
+01:57:52,680 --> 01:57:54,000
+Add 1 to the Score--
+
+2704
+01:57:54,000 --> 01:57:55,920
+and then Pick a new Random location.
+
+2705
+01:57:55,920 --> 01:57:58,290
+And now Green Flag--
+
+2706
+01:57:58,290 --> 01:57:59,520
+let's do this slowly.
+
+2707
+01:57:59,520 --> 01:58:00,540
+Here it goes.
+
+2708
+01:58:00,540 --> 01:58:01,590
+The trashcan opens.
+
+2709
+01:58:01,590 --> 01:58:02,520
+I let go.
+
+2710
+01:58:02,520 --> 01:58:06,660
+And now notice, at the top left of my
+program, notice the score is now 2.
+
+2711
+01:58:06,660 --> 01:58:10,140
+Notice the score, if I do this
+again, is about to become 3.
+
+2712
+01:58:10,140 --> 01:58:12,870
+And so here we have
+building blocks, literally,
+
+2713
+01:58:12,870 --> 01:58:15,910
+of making this program
+better and better and better.
+
+2714
+01:58:15,910 --> 01:58:20,610
+And so, indeed, that's how you generally
+approach solving any problem with code,
+
+2715
+01:58:20,610 --> 01:58:22,530
+be it in Scratch or C
+or Python or some other.
+
+2716
+01:58:22,530 --> 01:58:24,975
+You take this vision you
+might have or some vision
+
+2717
+01:58:24,975 --> 01:58:26,850
+you've been assigned in
+a homework assignment
+
+2718
+01:58:26,850 --> 01:58:29,490
+and try to break it down
+into these constituent parts
+
+2719
+01:58:29,490 --> 01:58:31,530
+and just pluck off the easy ones first.
+
+2720
+01:58:31,530 --> 01:58:33,390
+Put the lamp post there
+first, and at least
+
+2721
+01:58:33,390 --> 01:58:34,980
+feel like you're making some progress.
+
+2722
+01:58:34,980 --> 01:58:37,188
+Then pluck off something
+like the trash can, and just
+
+2723
+01:58:37,188 --> 01:58:38,457
+make it do a little thing.
+
+2724
+01:58:38,457 --> 01:58:40,540
+And it doesn't have to be
+in some same order here.
+
+2725
+01:58:40,540 --> 01:58:42,750
+I could have done this in
+a million different ways.
+
+2726
+01:58:42,750 --> 01:58:46,410
+But figure out what the small
+pieces are that, ultimately,
+
+2727
+01:58:46,410 --> 01:58:50,760
+like a few of the problems we've solved
+today, assemble into a greater solution
+
+2728
+01:58:50,760 --> 01:58:52,380
+there too.
+
+2729
+01:58:52,380 --> 01:58:56,410
+So that you have now a mental model
+for these types of blocks and others,
+
+2730
+01:58:56,410 --> 01:58:58,470
+let's return for a moment to this.
+
+2731
+01:58:58,470 --> 01:59:02,100
+We saw a moment ago that when I
+started saying, "Hello, David,"
+
+2732
+01:59:02,100 --> 01:59:06,670
+and nesting those puzzle pieces, we had
+a whole different paradigm altogether.
+
+2733
+01:59:06,670 --> 01:59:10,630
+My input for that second version of,
+"Hello, world," was to now pass in,
+
+2734
+01:59:10,630 --> 01:59:12,300
+for instance, "What's Your Name?"
+
+2735
+01:59:12,300 --> 01:59:15,000
+into my function, called Ask.
+
+2736
+01:59:15,000 --> 01:59:17,610
+That gave me not a side
+effect, but what I called,
+
+2737
+01:59:17,610 --> 01:59:21,690
+again, a return value, called
+Answer, by default, in Scratch.
+
+2738
+01:59:21,690 --> 01:59:25,710
+And now notice and recall,
+when I had that same output
+
+2739
+01:59:25,710 --> 01:59:31,260
+become the input to my next block, it
+looked a little something like this--
+
+2740
+01:59:31,260 --> 01:59:32,100
+Say.
+
+2741
+01:59:32,100 --> 01:59:36,240
+So how does this type of block and
+this nesting, this stacking of blocks,
+
+2742
+01:59:36,240 --> 01:59:37,710
+fit into the same mental model?
+
+2743
+01:59:37,710 --> 01:59:42,660
+Well, same idea-- my input for that part
+of the story is now taking in not one
+
+2744
+01:59:42,660 --> 01:59:43,790
+input but two--
+
+2745
+01:59:43,790 --> 01:59:47,190
+two arguments-- "hello"
+and the answer from before.
+
+2746
+01:59:47,190 --> 01:59:50,010
+The function, in this case,
+is that new block called Join.
+
+2747
+01:59:50,010 --> 01:59:53,640
+The output thereof is, "Hello,
+David," which itself became--
+
+2748
+01:59:53,640 --> 01:59:55,170
+if we sort of animate this--
+
+2749
+01:59:55,170 --> 02:00:00,840
+the input to my final function,
+which indeed was still Say.
+
+2750
+02:00:00,840 --> 02:00:03,150
+And this is only to
+say-- no pun intended--
+
+2751
+02:00:03,150 --> 02:00:06,570
+that almost everything that you
+do with these puzzle pieces,
+
+2752
+02:00:06,570 --> 02:00:09,605
+be it in the context of
+Oscartime or the mole whacking
+
+2753
+02:00:09,605 --> 02:00:11,730
+or even just something
+simple like, "Hello, world,"
+
+2754
+02:00:11,730 --> 02:00:16,320
+will ultimately fit into that
+relatively simple mental model there.
+
+2755
+02:00:16,320 --> 02:00:20,220
+Now, I thought we'd end by taking a
+look at just a couple of final examples.
+
+2756
+02:00:20,220 --> 02:00:22,950
+These ones, too, made by
+some of your predecessors.
+
+2757
+02:00:22,950 --> 02:00:26,010
+And for this, I thought we
+would not write code together,
+
+2758
+02:00:26,010 --> 02:00:27,760
+but read it instead.
+
+2759
+02:00:27,760 --> 02:00:30,960
+And so allow me to open
+up one other example here
+
+2760
+02:00:30,960 --> 02:00:34,770
+that will show us a few
+different versions of a program
+
+2761
+02:00:34,770 --> 02:00:36,720
+that a predecessor made.
+
+2762
+02:00:36,720 --> 02:00:38,340
+Give me just a moment here.
+
+2763
+02:00:38,340 --> 02:00:42,960
+And we'll see how we might build up
+to something even more interactive.
+
+2764
+02:00:42,960 --> 02:00:44,940
+And in just a moment,
+we'll see something
+
+2765
+02:00:44,940 --> 02:00:51,090
+they called Ivy's Hardest Game, focused
+here on these particular mechanics.
+
+2766
+02:00:51,090 --> 02:00:55,110
+So here is version 0, so to
+speak, of this program, wherein
+
+2767
+02:00:55,110 --> 02:00:58,560
+the goal was to create a game where you
+have to get out of some kind of maze.
+
+2768
+02:00:58,560 --> 02:01:01,800
+And you have to get out, in this case,
+the Harvard crest from this maze.
+
+2769
+02:01:01,800 --> 02:01:04,170
+Let me go ahead and just
+hit Play on this Green Flag
+
+2770
+02:01:04,170 --> 02:01:08,040
+so you can see what the first building
+block for this program might have been.
+
+2771
+02:01:08,040 --> 02:01:12,990
+Notice that my hand here is actually
+on the Arrow keys on my keyboard.
+
+2772
+02:01:12,990 --> 02:01:16,800
+And it seems that by moving
+up, down, left, or right,
+
+2773
+02:01:16,800 --> 02:01:20,432
+this little crest on the screen
+responds in exactly that way.
+
+2774
+02:01:20,432 --> 02:01:22,140
+Now, let's hypothesize
+for just a moment.
+
+2775
+02:01:22,140 --> 02:01:24,900
+Even though we've not done
+anything quite like this before,
+
+2776
+02:01:24,900 --> 02:01:27,260
+how might this code be implemented?
+
+2777
+02:01:27,260 --> 02:01:30,740
+How do you get a sprite,
+be it a cat or a crest,
+
+2778
+02:01:30,740 --> 02:01:34,220
+to respond to keys on a keyboard--
+might you think intuitively?
+
+2779
+02:01:34,220 --> 02:01:34,730
+Yeah--
+
+2780
+02:01:34,730 --> 02:01:36,983
+AUDIENCE: [INAUDIBLE]
+
+2781
+02:01:36,983 --> 02:01:38,900
+DAVID J. MALAN: Yeah,
+there could be something
+
+2782
+02:01:38,900 --> 02:01:40,410
+sensing what key you're pressing on.
+
+2783
+02:01:40,410 --> 02:01:42,230
+And if you do it again
+in forever a loop,
+
+2784
+02:01:42,230 --> 02:01:44,600
+you'll just constantly be
+listening for keystrokes.
+
+2785
+02:01:44,600 --> 02:01:47,240
+And this is how, like, every
+piece of software nowadays works.
+
+2786
+02:01:47,240 --> 02:01:49,910
+It's constantly waiting
+for your phone to be tapped
+
+2787
+02:01:49,910 --> 02:01:51,690
+or something to be typed on the screen.
+
+2788
+02:01:51,690 --> 02:01:55,400
+So let me go ahead and look inside
+of this existing program here.
+
+2789
+02:01:55,400 --> 02:01:57,890
+And there's more going on,
+but we'll take a quick glance
+
+2790
+02:01:57,890 --> 02:01:59,730
+what's actually going on.
+
+2791
+02:01:59,730 --> 02:02:02,000
+Well, up here at top
+left, notice, we just
+
+2792
+02:02:02,000 --> 02:02:04,850
+have Go To x Equals 0 and y Equals 0.
+
+2793
+02:02:04,850 --> 02:02:07,850
+That means put the Harvard crest dead
+center in the middle of the stage.
+
+2794
+02:02:07,850 --> 02:02:10,460
+Then we have Forever
+two functions that we
+
+2795
+02:02:10,460 --> 02:02:13,130
+made in advance as custom functions--
+
+2796
+02:02:13,130 --> 02:02:15,500
+Listen for Keyboard, Feel for Walls.
+
+2797
+02:02:15,500 --> 02:02:17,190
+So it's doing two things at once.
+
+2798
+02:02:17,190 --> 02:02:19,403
+It's forever listening
+for the keyboard-- up,
+
+2799
+02:02:19,403 --> 02:02:21,320
+down, left, right-- and
+feeling for the walls,
+
+2800
+02:02:21,320 --> 02:02:23,278
+in the sense that if I
+get too far to the left,
+
+2801
+02:02:23,278 --> 02:02:26,010
+I don't want it to keep
+moving past that black wall.
+
+2802
+02:02:26,010 --> 02:02:28,520
+And if it moves too far to the right, I
+don't want it to blow through that wall
+
+2803
+02:02:28,520 --> 02:02:29,060
+either.
+
+2804
+02:02:29,060 --> 02:02:32,300
+So it's going to do two things
+constantly, listening for keyboard
+
+2805
+02:02:32,300 --> 02:02:34,250
+and feeling for walls, so to speak.
+
+2806
+02:02:34,250 --> 02:02:35,870
+And how are those implemented?
+
+2807
+02:02:35,870 --> 02:02:37,190
+Well, this one's a bit long.
+
+2808
+02:02:37,190 --> 02:02:40,080
+But on the left here
+is Listen for Keyboard.
+
+2809
+02:02:40,080 --> 02:02:43,760
+So this pink puzzle piece,
+Listen for Keyboard,
+
+2810
+02:02:43,760 --> 02:02:47,420
+first checks If the Key Up
+Arrow is Pressed, question mark,
+
+2811
+02:02:47,420 --> 02:02:50,570
+Boolean expression in a
+conditional, Change y By 1.
+
+2812
+02:02:50,570 --> 02:02:52,040
+That means, move it up 1.
+
+2813
+02:02:52,040 --> 02:02:56,840
+Else If the Key Down Arrow is
+Pressed, then Change y by -1,
+
+2814
+02:02:56,840 --> 02:02:59,540
+and similar for Left Arrow,
+similar for Right Arrow.
+
+2815
+02:02:59,540 --> 02:03:02,660
+And even though there's not
+a loop in this pink function,
+
+2816
+02:03:02,660 --> 02:03:04,310
+there is where I'm using it.
+
+2817
+02:03:04,310 --> 02:03:06,860
+So it's constantly being
+asked again and again.
+
+2818
+02:03:06,860 --> 02:03:08,420
+How about feeling for walls?
+
+2819
+02:03:08,420 --> 02:03:10,010
+Well, over here to the right--
+
+2820
+02:03:10,010 --> 02:03:13,970
+it's a little cut off-- but here
+you have, If Touching Left Wall,
+
+2821
+02:03:13,970 --> 02:03:15,260
+Change x by 1.
+
+2822
+02:03:15,260 --> 02:03:17,200
+So if you hit the wall, it's too late.
+
+2823
+02:03:17,200 --> 02:03:18,950
+You're kind of blowing
+through it already.
+
+2824
+02:03:18,950 --> 02:03:23,000
+So I want to move it back one pixel
+so it's no longer touching that wall.
+
+2825
+02:03:23,000 --> 02:03:26,670
+Similarly, if it's touching the right
+wall, I want to back it up one pixel
+
+2826
+02:03:26,670 --> 02:03:28,220
+so it's no longer touching that wall.
+
+2827
+02:03:28,220 --> 02:03:31,070
+So it's kind of like bouncing
+off ever so slightly so that it
+
+2828
+02:03:31,070 --> 02:03:33,110
+doesn't slip through that actual wall.
+
+2829
+02:03:33,110 --> 02:03:34,340
+And what are those walls?
+
+2830
+02:03:34,340 --> 02:03:38,870
+Well, notice down here, it's just
+a simple sprite with a black line
+
+2831
+02:03:38,870 --> 02:03:41,790
+that I've oriented vertically
+instead of horizontally.
+
+2832
+02:03:41,790 --> 02:03:45,230
+And that's just so that I can ask
+questions of these other two sprites.
+
+2833
+02:03:45,230 --> 02:03:47,570
+Now, that gives me that
+form of interactivity.
+
+2834
+02:03:47,570 --> 02:03:49,200
+What more can I now do?
+
+2835
+02:03:49,200 --> 02:03:52,410
+Well, what if we make things a
+little more interactive here?
+
+2836
+02:03:52,410 --> 02:03:55,640
+Let me go ahead and see
+inside version 1 our second.
+
+2837
+02:03:55,640 --> 02:03:58,860
+And let me propose what's
+going to happen here.
+
+2838
+02:03:58,860 --> 02:04:02,600
+Well, how might we add a little
+something like Yale into the mix?
+
+2839
+02:04:02,600 --> 02:04:07,460
+Well, what's Yale going to do when I hit
+the Green Flag now based on this code?
+
+2840
+02:04:07,460 --> 02:04:09,920
+Any hunches?
+
+2841
+02:04:09,920 --> 02:04:13,250
+Here is the code for my Yale sprite.
+
+2842
+02:04:13,250 --> 02:04:13,820
+Yeah--
+
+2843
+02:04:13,820 --> 02:04:14,570
+AUDIENCE: [INAUDIBLE]
+
+2844
+02:04:14,570 --> 02:04:15,650
+DAVID J. MALAN: Yeah,
+it's kind of going to be
+
+2845
+02:04:15,650 --> 02:04:18,203
+an adversarially by blocking
+my path, theoretically,
+
+2846
+02:04:18,203 --> 02:04:19,370
+if I keep writing more code.
+
+2847
+02:04:19,370 --> 02:04:20,030
+So why?
+
+2848
+02:04:20,030 --> 02:04:22,160
+It too goes to the middle of the screen.
+
+2849
+02:04:22,160 --> 02:04:23,940
+It points in direction 90 degrees.
+
+2850
+02:04:23,940 --> 02:04:26,520
+So similarly, there's a
+whole degree system as well.
+
+2851
+02:04:26,520 --> 02:04:27,710
+And it forever asks this.
+
+2852
+02:04:27,710 --> 02:04:29,750
+If Touching the Left Wall Or--
+
+2853
+02:04:29,750 --> 02:04:30,920
+notice the green block--
+
+2854
+02:04:30,920 --> 02:04:33,900
+Touching the Right Wall, then
+just Turn around 180 Degrees.
+
+2855
+02:04:33,900 --> 02:04:35,900
+And indeed, if you think
+this through logically,
+
+2856
+02:04:35,900 --> 02:04:38,570
+that just means you're
+bouncing this way and this way
+
+2857
+02:04:38,570 --> 02:04:42,860
+by just flipping yourself around 180
+degrees for just this Yale sprite.
+
+2858
+02:04:42,860 --> 02:04:46,550
+So if I go ahead and zoom in on
+this and click the Green Flag,
+
+2859
+02:04:46,550 --> 02:04:48,350
+I can still move up and down.
+
+2860
+02:04:48,350 --> 02:04:52,170
+But Yale is just kind of doing
+this all day long, back and forth
+
+2861
+02:04:52,170 --> 02:04:53,490
+and back and forth, forever.
+
+2862
+02:04:53,490 --> 02:04:55,710
+Nothing bad happens if
+I try to go through it.
+
+2863
+02:04:55,710 --> 02:04:58,010
+But we could add that,
+certainly, to the mix.
+
+2864
+02:04:58,010 --> 02:05:01,760
+In fact, let's add one final feature
+before we play this particular game.
+
+2865
+02:05:01,760 --> 02:05:06,320
+And let me go ahead and open up the
+final version of these building blocks
+
+2866
+02:05:06,320 --> 02:05:08,640
+that adds MIT to the mix.
+
+2867
+02:05:08,640 --> 02:05:10,940
+So here is MIT.
+
+2868
+02:05:10,940 --> 02:05:13,182
+Someone want to explain
+what this code does?
+
+2869
+02:05:13,182 --> 02:05:14,390
+And this is what we're doing.
+
+2870
+02:05:14,390 --> 02:05:15,470
+This itself is a skill.
+
+2871
+02:05:15,470 --> 02:05:17,810
+Reading someone else's
+code and understanding it
+
+2872
+02:05:17,810 --> 02:05:20,640
+is half of the part of
+programming besides writing.
+
+2873
+02:05:20,640 --> 02:05:21,140
+Yeah--
+
+2874
+02:05:21,140 --> 02:05:22,015
+AUDIENCE: [INAUDIBLE]
+
+2875
+02:05:22,015 --> 02:05:24,960
+DAVID J. MALAN: Yeah, it's chasing
+down the Harvard logo outline.
+
+2876
+02:05:24,960 --> 02:05:26,870
+So this is apparently
+the name of the costume
+
+2877
+02:05:26,870 --> 02:05:30,050
+that this student made,
+Harvard logo outline.
+
+2878
+02:05:30,050 --> 02:05:32,600
+And apparently, it goes to
+a random position first.
+
+2879
+02:05:32,600 --> 02:05:34,700
+But then it forever points to Harvard.
+
+2880
+02:05:34,700 --> 02:05:36,830
+So no matter where I'm
+moving it, up, down, left,
+
+2881
+02:05:36,830 --> 02:05:39,413
+or right, MIT is being a little
+more strategic than Yale,
+
+2882
+02:05:39,413 --> 02:05:40,830
+bouncing back and forth like this.
+
+2883
+02:05:40,830 --> 02:05:43,440
+So let's go ahead and play
+this one in full screen.
+
+2884
+02:05:43,440 --> 02:05:45,540
+And here we have a Green Flag.
+
+2885
+02:05:45,540 --> 02:05:50,750
+So if I move up, MIT,
+rather strategically,
+
+2886
+02:05:50,750 --> 02:05:53,210
+is following me no matter where I go.
+
+2887
+02:05:53,210 --> 02:05:55,190
+All right, so still,
+nothing bad happens.
+
+2888
+02:05:55,190 --> 02:05:56,940
+But now it's struggling, right?
+
+2889
+02:05:56,940 --> 02:05:58,190
+It's going up, down, up, down.
+
+2890
+02:05:58,190 --> 02:06:00,950
+It's trying to follow me
+even though I'm not moving.
+
+2891
+02:06:00,950 --> 02:06:02,630
+So we need some final flourishes.
+
+2892
+02:06:02,630 --> 02:06:06,740
+And so I think, for this, we
+need perhaps one final volunteer.
+
+2893
+02:06:06,740 --> 02:06:09,830
+After this, cake awaits
+for everyone outside,
+
+2894
+02:06:09,830 --> 02:06:11,990
+as is an end of first
+lecture CS50 tradition.
+
+2895
+02:06:11,990 --> 02:06:14,840
+Would you like to come
+up and be our volunteer?
+
+2896
+02:06:14,840 --> 02:06:17,230
+[APPLAUSE]
+
+2897
+02:06:17,230 --> 02:06:23,450
+
+
+2898
+02:06:23,450 --> 02:06:24,040
+All right.
+
+2899
+02:06:24,040 --> 02:06:28,330
+And so this will be the actual version
+but written by one of your predecessors
+
+2900
+02:06:28,330 --> 02:06:30,040
+that I'll full screen here.
+
+2901
+02:06:30,040 --> 02:06:33,040
+It's going to stitch together all
+of these same primitives and more,
+
+2902
+02:06:33,040 --> 02:06:36,430
+but add the notion of scores and
+lives so that there's actually
+
+2903
+02:06:36,430 --> 02:06:41,260
+a goal, which in this case is to move
+the Harvard crest to constantly pursue
+
+2904
+02:06:41,260 --> 02:06:44,650
+the character on the right-hand side
+so that your sprite touches that one.
+
+2905
+02:06:44,650 --> 02:06:46,533
+Would you like to introduce yourself?
+
+2906
+02:06:46,533 --> 02:06:47,950
+AUDIENCE: Hi, my name is Mohammed.
+
+2907
+02:06:47,950 --> 02:06:49,000
+DAVID J. MALAN: All right, wonderful.
+
+2908
+02:06:49,000 --> 02:06:49,630
+Welcome aboard.
+
+2909
+02:06:49,630 --> 02:06:51,910
+And here we come with some
+instructions and final
+
+2910
+02:06:51,910 --> 02:06:56,048
+flourish if we want to keep the lights
+up but perhaps increase the music.
+
+2911
+02:06:56,048 --> 02:06:58,236
+[MUSIC PLAYING]
+
+2912
+02:06:58,236 --> 02:06:58,736
+
+
+2913
+02:06:58,736 --> 02:07:00,486
+[MUSIC - MC HAMMER, "U CAN'T TOUCH
+ THIS"]
+
+2914
+02:07:00,486 --> 02:07:02,150
+MC HAMMER: (SINGING) You can't this.
+
+2915
+02:07:02,150 --> 02:07:03,025
+You can't touch this.
+
+2916
+02:07:03,025 --> 02:07:05,567
+DAVID J. MALAN: Notice he is
+using the up, down, left, right.
+
+2917
+02:07:05,567 --> 02:07:07,320
+But there's many more walls now.
+
+2918
+02:07:07,320 --> 02:07:08,730
+First level's pretty easy.
+
+2919
+02:07:08,730 --> 02:07:13,560
+But now Yale's in the mix,
+bouncing back and forth.
+
+2920
+02:07:13,560 --> 02:07:15,420
+Again, pretty easy.
+
+2921
+02:07:15,420 --> 02:07:22,290
+Now there's two Yale's at
+slightly different positions.
+
+2922
+02:07:22,290 --> 02:07:23,730
+MIT is coming soon.
+
+2923
+02:07:23,730 --> 02:07:25,432
+But first, we have three Yales.
+
+2924
+02:07:25,432 --> 02:07:26,640
+MC HAMMER: (SINGING) As such.
+
+2925
+02:07:26,640 --> 02:07:28,542
+And this is a beat, uh, you can't touch.
+
+2926
+02:07:28,542 --> 02:07:29,625
+DAVID J. MALAN: Very nice.
+
+2927
+02:07:29,625 --> 02:07:30,125
+[APPLAUSE]
+
+2928
+02:07:30,125 --> 02:07:33,100
+MC HAMMER: (SINGING) I told you,
+homeboy, you can't touch this.
+
+2929
+02:07:33,100 --> 02:07:36,820
+Yeah, that's how it look when
+you know you can't touch this.
+
+2930
+02:07:36,820 --> 02:07:40,798
+Look at my eyes, man,
+you can't touch this.
+
+2931
+02:07:40,798 --> 02:07:43,090
+Yo, let me bust the funky
+lyrics. you can't touch this.
+
+2932
+02:07:43,090 --> 02:07:45,171
+Fresh new kicks and pants,
+you got to like that.
+
+2933
+02:07:45,171 --> 02:07:46,504
+Now, you know you want to dance.
+
+2934
+02:07:46,504 --> 02:07:48,570
+So move out of your seat and get a fly--
+
+2935
+02:07:48,570 --> 02:07:49,290
+DAVID J. MALAN: You got to go quick.
+
+2936
+02:07:49,290 --> 02:07:51,623
+MC HAMMER: (SINGING) Catch
+this beat while it's rolling.
+
+2937
+02:07:51,623 --> 02:07:52,130
+Hold on.
+
+2938
+02:07:52,130 --> 02:07:55,490
+Pump a little bit, and let them know
+what's going on, like that, like that.
+
+2939
+02:07:55,490 --> 02:07:57,056
+Cold on a mission, so fall on back.
+
+2940
+02:07:57,056 --> 02:08:02,800
+Let them know that you're too much
+and this a beat, uh, they can't touch.
+
+2941
+02:08:02,800 --> 02:08:03,627
+Yo, I told you.
+
+2942
+02:08:03,627 --> 02:08:04,502
+You can't touch this.
+
+2943
+02:08:04,502 --> 02:08:06,882
+[APPLAUSE]
+
+2944
+02:08:06,882 --> 02:08:08,790
+
+
+2945
+02:08:08,790 --> 02:08:09,810
+Yo, sound the bell.
+
+2946
+02:08:09,810 --> 02:08:10,975
+School's in, sucker.
+
+2947
+02:08:10,975 --> 02:08:11,850
+You can't touch this.
+
+2948
+02:08:11,850 --> 02:08:13,432
+Give me a song, a rhythm.
+
+2949
+02:08:13,432 --> 02:08:15,390
+Making them sweat, that's
+what I'm giving them.
+
+2950
+02:08:15,390 --> 02:08:17,892
+Now they know, you
+talk about the Hammer,
+
+2951
+02:08:17,892 --> 02:08:20,810
+you talking about a show
+that's hyped and tight.
+
+2952
+02:08:20,810 --> 02:08:24,018
+Singers are sweating, so pass
+them a wipe or a tape to learn.
+
+2953
+02:08:24,018 --> 02:08:25,060
+What's it going to take--
+
+2954
+02:08:25,060 --> 02:08:27,040
+DAVID J. MALAN: Second-to-last level.
+
+2955
+02:08:27,040 --> 02:08:28,165
+MC HAMMER: (SINGING) Legit.
+
+2956
+02:08:28,165 --> 02:08:30,065
+Either work hard or
+you might as well quit.
+
+2957
+02:08:30,065 --> 02:08:31,410
+That's word because you know--
+
+2958
+02:08:31,410 --> 02:08:32,535
+DAVID J. MALAN: Last level.
+
+2959
+02:08:32,535 --> 02:08:35,652
+MC HAMMER: (SINGING)
+You can't touch this.
+
+2960
+02:08:35,652 --> 02:08:37,124
+DAVID J. MALAN: Hey!
+
+2961
+02:08:37,124 --> 02:08:37,624
+[LAUGHS]
+
+2962
+02:08:37,624 --> 02:08:39,710
+[APPLAUSE]
+
+2963
+02:08:39,710 --> 02:08:40,210
+Congrats.
+
+2964
+02:08:40,210 --> 02:08:45,170
+
+
+2965
+02:08:45,170 --> 02:08:47,570
+All right, that's it for CS50.
+
+2966
+02:08:47,570 --> 02:08:48,410
+Welcome.
+
+2967
+02:08:48,410 --> 02:08:49,820
+Cake is now served.
+
+2968
+02:08:49,820 --> 02:08:51,950
+We'll see you next time.
+
+2969
+02:08:51,950 --> 02:08:53,450
+[PROJECTOR CLICKING]
+
+2970
+02:08:53,450 --> 02:08:56,800
+[MUSIC PLAYING]
+
+2971
+02:08:56,800 --> 02:09:29,000
