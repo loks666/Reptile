@@ -105,7 +105,7 @@ if __name__ == '__main__':
     
     # modify(path)
     # print(os.path.getsize('E:\\remove\94704.jpg'))
-    # dirs = group_file(source) #分类文件
+    # dirs = group_file.py(source) #分类文件
     # dirs = {'jpg', 'mov', 'mp4'}
     # for i in dirs:
     #     print(i)
