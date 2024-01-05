@@ -18,7 +18,7 @@ pdfplumber==0.6.0
 Pillow==10.0.1
 ply==3.11
 pycparser==2.21
-pycryptodome==3.14.1
+pycryptodome==3.19.1
 PyMySQL==1.0.2
 pyOpenSSL==22.0.0
 PyPDF2==1.27.5
